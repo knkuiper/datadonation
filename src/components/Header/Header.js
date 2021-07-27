@@ -25,13 +25,13 @@ class Header extends Component {
             <Typography edge="start" variant="h5" noWrap>
               Data donation
             </Typography>
-          <Button
+            {/*<Button
               variant="outlined"
               className={classes.login}
               startIcon={< AccountCircleIcon />}
             >
               My profile
-            </Button>
+            </Button>*/}
           </Toolbar>
         </AppBar>
       </>

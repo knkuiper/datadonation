@@ -220,13 +220,13 @@ export default function DonationBaseline() {
                                     </Button>
                                 )}
                                 {activeStep === 3 && (
-                                    <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
-                                    Consent
+                                    <Button color="primary" onClick={handleSkip} className={classes.button}>
+                                        No consent
                                     </Button>
                                 )}
                                 {activeStep === 3 && (
-                                    <Button variant="outlined" color="primary" onClick={handleSkip} className={classes.button}>
-                                    No consent
+                                    <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
+                                    Consent
                                     </Button>
                                 )}
                                 {activeStep === 4 && (
