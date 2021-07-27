@@ -72,7 +72,7 @@ export default function Dashboard() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/donation" className={classes.button}>
+                            <Button variant="contained" color="primary" href="/donationA" className={classes.button}>
                         Donate data
                     </Button>
                 </CardActions>

@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
 import Dashboard from '../Dashboard/dashboard';
-import Donation from '../Donation/donation';
+import DonationBaseline from '../Donation/donationBaseline';
+import DonationHiConstrual from '../Donation/donationHiConstrual';
+import DonationLoConstrual from '../Donation/donationLoConstrual';
 //import AnonScript from '../Script/AnonScript';
 import './App.css';
 
@@ -63,12 +65,9 @@ function App() {
           <Header />
           <Switch>
             <Route path="/dashboard" component= { Dashboard }/>
-            <Route path="/donation" component= { Donation } />
-            {/* 
-            <Route path="/donationA" component={DonationA} />
-            <Route path="/donationB" component={DonationB} />
-            <Route path="/donationC" component={DonationC} />
-            */}
+            <Route path="/donationA" component={ DonationBaseline } />
+            <Route path="/donationB" component={ DonationHiConstrual } />
+            <Route path="/donationC" component={ DonationLoConstrual } />
             <Route path="/login" />
             <Route path='/'>
               <Redirect to="/dashboard" />

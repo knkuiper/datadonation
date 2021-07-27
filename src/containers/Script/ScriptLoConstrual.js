@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function AnonScript() {
+export default function ScriptLoConstrual() {
     const classes = useStyles();
 
     return (
@@ -50,6 +50,10 @@ export default function AnonScript() {
             spacing={3}>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
+                    <Typography gutterBottom variant="h5" color="error">
+                        Explanation Lo construal
+                    </Typography>
+                
                     <Typography gutterBottom variant="h5" color="error">
                     Script
                     </Typography>
