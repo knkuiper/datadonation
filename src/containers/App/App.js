@@ -4,8 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
 import Dashboard from '../Dashboard/dashboard';
 import Donation from '../Donation/donation';
-import TestStepper from '../Donation/testStepper';
-import AnonScript from '../Test/AnonScript';
+//import AnonScript from '../Script/AnonScript';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -65,8 +64,11 @@ function App() {
           <Switch>
             <Route path="/dashboard" component= { Dashboard }/>
             <Route path="/donation" component= { Donation } />
-            <Route path="/test" component={ TestStepper } />
-            <Route path="/script" component={ AnonScript } />
+            {/* 
+            <Route path="/donationA" component={DonationA} />
+            <Route path="/donationB" component={DonationB} />
+            <Route path="/donationC" component={DonationC} />
+            */}
             <Route path="/login" />
             <Route path='/'>
               <Redirect to="/dashboard" />

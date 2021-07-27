@@ -12,22 +12,6 @@ const useStyles = makeStyles((theme) => ({
         margin: 10,
         backgroundColor: theme.palette.paper.dark,
     },
-    progressContainer: {
-        backgroundColor: theme.palette.paper.dark,
-    },
-    input: {
-        display: 'none',
-    },
-    button: {
-        marginTop: 20, //theme.spacing(1),
-        marginRight: theme.spacing(1),
-    },
-    actionsContainer: {
-        marginBottom: theme.spacing(2),
-    },
-    infoContainer: {
-        width: 255,
-    },
     indentOne: {
         marginLeft: 20,
     },
@@ -64,7 +48,7 @@ export default function AnonScript() {
             justify="center"
             alignItems="center"
             spacing={3}>
-            <Grid item xs={8}>
+            <Grid item xs={12}>
                 <Paper className={classes.paper}>
                     <Typography gutterBottom variant="h5" color="error">
                     Script
@@ -114,29 +98,55 @@ export default function AnonScript() {
                                             placevisit_duration.append(</div>
                                                 <div className={classes.indentFour}>{`{address: (int(end_time) - int(start_time))/(1e3*24*60*60)})`}</div>
                                 <br/>
-                                <div className={classes.indentOne}># list of places visited<br/>
+                                <div className={classes.indentOne}>
+                                # list of places visited<br/>
                                 {`address_list = {next(iter(duration)) for duration in placevisit_duration}`}<br />
                                 <br />
                                 # dict of time spend per place<br/>
-                                places = { }<br/>
+                                places = {`{}`} <br/>
                                 for address in address_list:</div>
-                                <div className={classes.indentOne}>places[address] = round(sum(</div>
-                                <div className={classes.indentTwo}>[duration[address] for duration in placevisit_duration</div>
-                                <div className={classes.indentThree}>if address == list(duration.keys())[0]]), 3)</div>
-                                <div className={classes.indentOne}># Sort places to amount of time spend<br/>
+                                    <div className={classes.indentTwo}>places[address] = round(sum(</div>
+                                        <div className={classes.indentThree}>[duration[address] for duration in placevisit_duration</div>
+                                            <div className={classes.indentFour}>if address == list(duration.keys())[0]]), 3)</div>
+                                <div className={classes.indentOne}>
+                                # Sort places to amount of time spend<br/>
                                 places = dict(sorted(places.items(), key=lambda kv: kv[1], reverse=True))<br />
                                 <br/>
-                                return places<br /></div>
+                                return places</div>
                                 <br/>
+                                <br />
+                            
                             def __activity_duration(data):
                                 <div className={classes.indentOne}>
-                                """Get total duration of activities
+                                """Get total duration of activities<br />
                                 Args:</div>
                                     <div className={classes.indentTwo}>data (dict): Google Semantic Location History data</div>
                                 <div className={classes.indentOne}>Returns:</div>
                                     <div className={classes.indentTwo}>float: duration of actitvities in days</div>
-                                <div className={classes.indentOne}>"""<br />
-                                activity_distance = 0.0
+                                <div className={classes.indentOne}>
+                                """<br />
+                                activity_duration = 0.0<br />
+                                for data_unit in data["timelineObjects"]:
+                                </div>
+                                <div className={classes.indentTwo}>if "activitySegment" in data_unit.keys():</div>
+                                <div className={classes.indentThree}>start_time = data_unit["activitySegment"]["duration"]["startTimestampMs"]<br />
+                                end_time = data_unit["activitySegment"]["duration"]["endTimestampMs"]<br />
+                                activity_duration += (int(end_time) - int(start_time))/(1e3*24*60*60)</div>
+                                <br />
+                                <div className={classes.indentOne}>return activity_duration</div>
+                                <br />
+                                <br />
+                               
+                            def __activity_distance(data):
+                                <div className={classes.indentOne}>        
+                                """Get total distance of activities
+                                Args:</div>
+                                <div className={classes.indentTwo}> data (dict): Google Semantic Location History data</div>
+                                <div className={classes.indentOne}>Returns:</div>
+                                <div className={classes.indentTwo}>float: duration of actitvities in days</div>
+                                <div className={classes.indentOne}>
+                                """<br />
+                                activity_distance = 0.0<br />
                                 for data_unit in data["timelineObjects"]:
                                 </div>
                                 <div className={classes.indentTwo}>if "activitySegment" in data_unit.keys():</div>
@@ -145,6 +155,7 @@ export default function AnonScript() {
                                 <div className={classes.indentOne}>return activity_distance</div>
                                 <br />
                                 <br />
+                            
                             def process(file_data):
                                 <div className={classes.indentOne}>
                                 """Return relevant data from zipfile for years and months<br />
@@ -155,7 +166,7 @@ export default function AnonScript() {
                                 <div className={classes.indentOne}>
                                 """<br />
                                 results = []<br />
-                                filenames = []
+                                filenames = []<br />
                                 <br />
                                 # Extract info from selected years and months
                                 with zipfile.ZipFile(file_data) as zfile:
@@ -165,17 +176,17 @@ export default function AnonScript() {
                                     for year in YEARS:
                                     </div>
                                         <div className={classes.indentThree}>for month in MONTHS:</div>
-                                <div className={classes.indentFour}>for name in file_list:</div>
-                                        <div className={classes.indentFive}>
-                                        {`monthfile = f"{year}_{month}.json"`} <br />
-                                        if re.search(monthfile, name) is not None:
-                                        </div>
-                                        <div className={classes.indentSix}> 
-                                            filenames.append(monthfile) <br />
-                                            data = json.loads(zfile.read(name).decode("utf8")) <br />
-                                            places = __visit_duration(data) <br />
-                                            results.append({`{`}<br />
-                                        </div>
+                                            <div className={classes.indentFour}>for name in file_list:</div>
+                                                <div className={classes.indentFive}>
+                                                {`monthfile = f"{year}_{month}.json"`} <br />
+                                                if re.search(monthfile, name) is not None:
+                                                </div>
+                                                    <div className={classes.indentSix}> 
+                                                        filenames.append(monthfile) <br />
+                                                        data = json.loads(zfile.read(name).decode("utf8"))<br />
+                                                        places = __visit_duration(data) <br />
+                                                        results.append({`{`}<br />
+                                                    </div>
                                         <div className={classes.indentSeven}>
                                             "Year": year,<br />
                                             "Month": month,<br />
@@ -209,14 +220,14 @@ export default function AnonScript() {
                                     return {`{`}
                                 </div>
                                 <div className={classes.indentTwo}>
-                                    "summary": TEXT,
+                                    "summary": TEXT,<br />
                                     "data_frames": [
                                 </div>
                                 <div className={classes.indentThree}>
                                     data_frame.fillna(0)
                                 </div>
                                 <div className={classes.indentTwo}>]</div>
-                                <div className={classes.indentOne}>}</div>
+                                <div className={classes.indentOne}>{`}`}</div>
                         </code>
                     </Typography>    
                 </Paper>
