@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ScriptBaseline() {
+export default function ScriptBase() {
     const classes = useStyles();
 
     return (
@@ -56,7 +56,6 @@ export default function ScriptBaseline() {
                     <Typography gutterBottom variant="body1" color="error">
                     The script that is used to extract the relevant data from your data package.
                     </Typography>
-                
                     <Typography gutterBottom variant="body2" color="error">
                         <code>
                             import json<br/>
@@ -69,11 +68,11 @@ export default function ScriptBaseline() {
                             YEARS = [2019, 2020, 2021]<br/>
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. \<br/>
-                            We therefore examined your Google semantic Location History data for January in 2019, \<br/>
-                            2020, and 2021. To be precise, we extracted per month the total number of visited places, \<br/>
-                            and the number of days spend per place for the three most visited places. Also, we extracted \<br/>
-                            the number of days spend in places and travelling, and the travelled distance in km."<br/>
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic.
+                            We therefore examined your Google semantic Location History data for January in 2019,
+                            2020, and 2021. To be precise, we extracted per month the total number of visited places,
+                            and the number of days spend per place for the three most visited places. Also, we extracted
+                            the number of days spend in places and travelling, and the travelled distance in km."
                             <br/>
                             <br/>
                             
@@ -199,7 +198,7 @@ export default function ScriptBaseline() {
                                         "Activity Distance [km]": round(__activity_distance(data), 3)
                                         </div>
                                         <div className={classes.indentSix}>
-                                        })<br />
+                                        {`}`})<br />
                                         break</div>
                             <br />
                                 <div className={classes.indentOne}>   

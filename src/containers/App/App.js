@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
-import Dashboard from '../Dashboard/dashboard';
-import DonationBaseline from '../Donation/donationBaseline';
-import DonationHiConstrual from '../Donation/donationHiConstrual';
-import DonationLoConstrual from '../Donation/donationLoConstrual';
-//import AnonScript from '../Script/AnonScript';
+import DashboardBase from '../Dashboard/DashboardBase';
+import DashboardHigh from '../Dashboard/DashboardHigh';
+import DashboardLow from '../Dashboard/DashboardLow';
+import DonationBase from '../Donation/DonationBase';
+import DonationHigh from '../Donation/DonationHigh';
+import DonationLow from '../Donation/DonationLow';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -64,14 +65,16 @@ function App() {
         <div>
           <Header />
           <Switch>
-            <Route path="/dashboard" component= { Dashboard }/>
-            <Route path="/donationA" component={ DonationBaseline } />
-            <Route path="/donationB" component={ DonationHiConstrual } />
-            <Route path="/donationC" component={ DonationLoConstrual } />
-            <Route path="/login" />
+            <Route path="/dashboardA" component={ DashboardBase }/>
+            <Route path="/dashboardB" component={ DashboardHigh } />
+            <Route path="/dashboardC" component={ DashboardLow } />
+            <Route path="/donationA" component={ DonationBase } />
+            <Route path="/donationB" component={ DonationHigh } />
+            <Route path="/donationC" component={ DonationLow } />
+            {/*<Route path="/login" />
             <Route path='/'>
               <Redirect to="/dashboard" />
-            </Route>
+            </Route>*/}
           </Switch> 
         </div>
       </BrowserRouter>

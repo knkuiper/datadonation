@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, CardHeader, CardContent, CardActions, Avatar, Button, Typography } from '@material-ui/core';
+import UUlogo from '../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,24 +48,25 @@ export default function Dashboard() {
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={
-                        <Avatar alt="UUlogo" src="../assets/img/UU_logo.png" className={classes.avatar} />
+                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
                     }
                     title={
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography variant="h6" component="h6">
                             Changes in movement during Covid lockdowns
                         </Typography>
                     }
                 />
                 <CardContent>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
+                    <Typography variant="subtitle1" color="textPrimary">
                         How much did the % of time you spent inside and outside your home change because of the covid-lockdown?
-
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph color="textPrimary">
                         The research study will examine your Google semantic Location History data of January 2019, 2020 and 2021.
                     </Typography>
                     <Typography variant="subtitle1" paragraph color="textPrimary">
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
-                    <Typography variant="subtitle2" paragraph gutterBottom color="textPrimary">
+                    <Typography variant="subtitle2" paragraph color="textPrimary">
                         Available from July to August 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">
@@ -72,7 +74,7 @@ export default function Dashboard() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                            <Button variant="contained" color="primary" href="/donationA" className={classes.button}>
+                    <Button variant="contained" color="primary" href="/donationB" className={classes.button}>
                         Donate data
                     </Button>
                 </CardActions>
@@ -83,14 +85,14 @@ export default function Dashboard() {
                 Upcoming studies 2
             </Typography>
         </Grid>
-        <Grid item xs={3} className={classes.cardGrid}>
+        <Grid item xs={4} className={classes.cardGrid}>
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={
-                        <Avatar alt="UUlogo" src="../public/img/UU_logo.png" className={classes.avatar} />
+                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
                     }
                     title={
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography variant="h6" component="h6">
                             Changes in internet search patterns during Covid lockdowns
                         </Typography>
                     }
@@ -102,7 +104,7 @@ export default function Dashboard() {
                     <Typography variant="subtitle1" paragraph color="textPrimary">
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
-                    <Typography variant="subtitle2" paragraph gutterBottom color="textPrimary">
+                    <Typography variant="subtitle2" paragraph color="textPrimary">
                         Available from August 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">
@@ -116,14 +118,14 @@ export default function Dashboard() {
                 </CardActions>
             </Card>
         </Grid>
-        <Grid item xs={3} className={classes.cardGrid}>
+        <Grid item xs={4} className={classes.cardGrid}>
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={
-                        <Avatar alt="UUlogo" src="../public/img/UU_logo.png" className={classes.avatar} />
+                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
                     }
                     title={
-                        <Typography gutterBottom variant="h5" component="h2">
+                        <Typography variant="h6" component="h6">
                             Changes in streaming habits  during Covid lockdowns
                         </Typography>
                     }
@@ -135,7 +137,7 @@ export default function Dashboard() {
                     <Typography variant="subtitle1" paragraph color="textPrimary">
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
-                    <Typography variant="subtitle2" paragraph gutterBottom color="textPrimary">
+                    <Typography variant="subtitle2" paragraph color="textPrimary">
                         Available from October 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">

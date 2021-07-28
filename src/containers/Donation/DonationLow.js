@@ -1,8 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography } from '@material-ui/core';
-import ScriptBaseline from '../Script/ScriptBaseline';
+import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
+import ScriptLow from '../Script/ScriptLow';
 import DataFeedback from '../Feedback/DataFeedback';
+import UUlogo from '../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -66,7 +67,7 @@ function getStepContent(step) {
   }
 }
 
-export default function DonationBaseline() {
+export default function DonationLow() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -165,85 +166,85 @@ export default function DonationBaseline() {
                     const stepProps = {};
                     const buttonProps = {};
                     if (isStepOptional(index)) {
-                       // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
+                        // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
                     }
                     if (isStepSkipped(index)) {
                         stepProps.completed = false;
                     }
                     return (
                     <Step key={label} {...stepProps}>
-                        <StepButton
-                            onClick={handleStep(index)}
-                            completed={isStepComplete(index)}
-                            {...buttonProps}
-                        >
-                            <Typography variant="h6">
-                                {label}
-                            </Typography>
-                        </StepButton>
-                        <StepContent>
+                            <StepButton
+                                onClick={handleStep(index)}
+                                completed={isStepComplete(index)}
+                                {...buttonProps}
+                            >
+                                <Typography variant="h6">
+                                    {label}
+                                </Typography>
+                            </StepButton>
+                    <StepContent>
                         <Typography gutterBottom variant="body1" color="text">{getStepContent(index)}</Typography>
-                            <div className={classes.actionsContainer}>
-                                <Grid 
-                                container
-                                spacing={3}
-                                direction="row"
-                                >
-                                <Button disabled={activeStep === 0 || activeStep === 4} onClick={handleBack} className={classes.button}>
-                                Back
-                                </Button>
-                                {activeStep === 0 && (
-                                    <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
-                                    Next
-                                    </Button> 
-                                )}
-                                {activeStep === 1 && (
-                                <div>
-                                    <input
-                                    accept=".zip"
-                                    className={classes.input}
-                                    id="contained-button-file"
-                                    multiple
-                                    type="file"
-                                    onInput={handleComplete}
-                                    />
-                                    <label htmlFor="contained-button-file">
-                                        <Button variant="contained" color="primary" component="span" className={classes.button}>
-                                        Upload
+                                <div className={classes.actionsContainer}>
+                                    <Grid
+                                        container
+                                        spacing={3}
+                                        direction="row"
+                                    >
+                                        <Button disabled={activeStep === 0 || activeStep === 4} onClick={handleBack} className={classes.button}>
+                                            Back
                                         </Button>
-                                    </label>
-                                    </div>
-                                )}
-                                {activeStep === 2 && (
-                                    <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
-                                    Process data
-                                    </Button>
-                                )}
-                                {activeStep === 3 && (
-                                    <Button color="primary" onClick={handleSkip} className={classes.button}>
-                                        No consent
-                                    </Button>
-                                )}
-                                {activeStep === 3 && (
-                                    <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
-                                    Consent
-                                    </Button>
-                                )}
-                                {activeStep === 4 && (
-                                    <Button variant="contained" color="secondary" href="https://qualtrics.com" className={classes.button}>
-                                    Go to survey
-                                    </Button>
-                                )}
-                                </Grid>
-                                <Grid className={classes.scriptContainer} >
-                                {activeStep === 2 && (
-                                    <ScriptBaseline />
-                                )}
-                                {activeStep === 3 && (
-                                    <DataFeedback />
-                                )}
-                                </Grid>
-                            </div>
+                                        {activeStep === 0 && (
+                                            <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
+                                                Next
+                                            </Button>
+                                        )}
+                                        {activeStep === 1 && (
+                                            <div>
+                                                <input
+                                                    accept=".zip"
+                                                    className={classes.input}
+                                                    id="contained-button-file"
+                                                    multiple
+                                                    type="file"
+                                                    onInput={handleComplete}
+                                                />
+                                                <label htmlFor="contained-button-file">
+                                                    <Button variant="contained" color="primary" component="span" className={classes.button}>
+                                                        Upload
+                                                    </Button>
+                                                </label>
+                                            </div>
+                                        )}
+                                        {activeStep === 2 && (
+                                            <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
+                                                Process data
+                                            </Button>
+                                        )}
+                                        {activeStep === 3 && (
+                                            <Button color="primary" onClick={handleSkip} className={classes.button}>
+                                                No consent
+                                            </Button>
+                                        )}
+                                        {activeStep === 3 && (
+                                            <Button variant="contained" color="primary" onClick={handleComplete} className={classes.button}>
+                                                Consent
+                                            </Button>
+                                        )}
+                                        {activeStep === 4 && (
+                                            <Button variant="contained" color="secondary" href="https://qualtrics.com" className={classes.button}>
+                                                Go to survey
+                                            </Button>
+                                        )}
+                                    </Grid>
+                                    <Grid className={classes.scriptContainer} >
+                                        {activeStep === 2 && (
+                                            <ScriptLow />
+                                        )}
+                                        {activeStep === 3 && (
+                                            <DataFeedback />
+                                        )}
+                                    </Grid>
+                                </div>
                         </StepContent>  
                     </Step>
                     );
@@ -263,6 +264,7 @@ export default function DonationBaseline() {
                 <Typography gutterBottom variant="body1">
                 We respect your privacy. Your data donation is anonymous.
                 </Typography>
+                <Avatar src={UUlogo} alt="logo" className={classes.image} />
             </Grid>
         </Grid>
     </>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography } from '@material-ui/core';
-import ScriptLoConstrual from '../Script/ScriptLoConstrual';
+import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
+import ScriptHigh from '../Script/ScriptHigh';
 import DataFeedback from '../Feedback/DataFeedback';
+import UUlogo from '../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -66,7 +67,7 @@ function getStepContent(step) {
   }
 }
 
-export default function DonationLoConstrual() {
+export default function DonationHigh() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -165,7 +166,7 @@ export default function DonationLoConstrual() {
                     const stepProps = {};
                     const buttonProps = {};
                     if (isStepOptional(index)) {
-                        // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
+                       // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
                     }
                     if (isStepSkipped(index)) {
                         stepProps.completed = false;
@@ -237,7 +238,7 @@ export default function DonationLoConstrual() {
                                     </Grid>
                                     <Grid className={classes.scriptContainer} >
                                         {activeStep === 2 && (
-                                            <ScriptLoConstrual />
+                                            <ScriptHigh />
                                         )}
                                         {activeStep === 3 && (
                                             <DataFeedback />
@@ -263,6 +264,7 @@ export default function DonationLoConstrual() {
                 <Typography gutterBottom variant="body1">
                 We respect your privacy. Your data donation is anonymous.
                 </Typography>
+                <Avatar src={UUlogo} alt="logo" className={classes.image} />
             </Grid>
         </Grid>
     </>
