@@ -4,7 +4,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptHigh from '../../Script/ScriptHigh';
+import ScriptHigh from '../../Script/ScriptHighBeta';
 import DataFeedback from '../../Feedback/DataFeedback';
 import UUlogo from '../../../assets/img/UU_logo.png';
 

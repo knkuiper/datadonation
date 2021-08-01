@@ -1,3 +1,5 @@
+//Not in use, can be removed
+
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 

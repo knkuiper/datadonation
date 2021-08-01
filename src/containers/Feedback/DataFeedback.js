@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiTableCell from "@material-ui/core/TableCell";
 import { Grid, Paper, Typography, Table, TableBody, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import ScriptBase from '../Script/ScriptBase';
+import ScriptBase from '../Script/ScriptBaseAlfa';
 
 const TableCell = withStyles({
     root: {
