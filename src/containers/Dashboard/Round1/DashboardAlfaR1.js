@@ -55,13 +55,13 @@ export default function DashboardAlfaR1() {
                     }
                     title={
                         <Typography variant="h6" component="h6">
-                            Changes in movement during Covid lockdowns
+                            Changes in movement during COVID-19 lockdowns
                         </Typography>
                     }
                 />
                 <CardContent>
-                    <Typography variant="subtitle1" color="textPrimary">
-                        How much did the % of time you spent inside and outside your home change because of the covid-lockdown?
+                    <Typography paragraph variant="subtitle1" color="textPrimary">
+                        How much did the time spent inside and outside your home change due to COVID-19 lockdowns?
                     </Typography>
                     <Typography variant="subtitle1" paragraph color="textPrimary">
                         The research study will examine your Google semantic Location History data of January 2019, 2020 and 2021.
@@ -70,7 +70,7 @@ export default function DashboardAlfaR1() {
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
                     <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from July to August 2021
+                        Available from July 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">
                         Open for data donation
@@ -97,7 +97,7 @@ export default function DashboardAlfaR1() {
                     }
                     title={
                         <Typography variant="h6" component="h6">
-                            Changes in internet search patterns during Covid lockdowns
+                            Changes in internet search patterns during COVID-19 lockdowns
                         </Typography>
                     }
                 />
@@ -109,7 +109,7 @@ export default function DashboardAlfaR1() {
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
                     <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from August 2021
+                        Available from September 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">
                         Not open for data donation
@@ -130,7 +130,7 @@ export default function DashboardAlfaR1() {
                     }
                     title={
                         <Typography variant="h6" component="h6">
-                            Changes in streaming habits  during Covid lockdowns
+                            Changes in streaming habits during COVID-19 lockdowns
                         </Typography>
                     }
                 />

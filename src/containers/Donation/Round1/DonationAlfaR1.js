@@ -4,8 +4,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptBase from '../../Script/ScriptBaseAlfa';
-import DataFeedback from '../../Feedback/DataFeedback';
+import ScriptBaseAlfa from '../../Script/ScriptBaseAlfa';
+import DataFeedbackBaseAlfa from '../../Feedback/DataFeedbackBaseAlfa';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 20,
     },
     paper: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
         margin: 10,
         backgroundColor: theme.palette.paper.light,
     },
@@ -31,13 +31,6 @@ const useStyles = makeStyles((theme) => ({
     actionsContainer: {
         marginBottom: theme.spacing(2),
     },
-    image: {
-        display: 'flex',
-        justifyContent: 'center',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
 }));
 
 function getSteps() {
@@ -53,25 +46,23 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-        return `If you have not already requested your data from Google, go to the Google 
-        Takeout page and follow the instructions to download your Google data package.`;
+        return `If you have not requested your data from Google, go to Google Takeout and follow the instructions 
+        to request your Google location data.`;
     case 1:
-        return `Once you have received your data package from Google and saved it to your device, 
-        select the data file to upload.
-        Note: Your data package stays locally on your device and will not be uploaded to a server.`;
+        return `Once you have saved your data package from Google to your device, select the data file (a zip file) 
+        to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
     case 2:
-        return `By clicking the button, the data that is relevant for this research will be extracted 
-        from your data package. The data will not leave your device and no data is stored on a server. 
-        The extracted data will be shown at the next step for your consent. The script that is used to 
-        extract the relevant data from your data package, is shown at the bottom of this page.`;
+        return `By processing the data, the data relevant for this research will be extracted from your data package. 
+        The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
+        the next step for your consent. The script that is used to extract the relevant data from your data package, 
+        is shown below.`;
     case 3:
-        return `By clicking the button, you consent to donate the extracted data to the research study.
-        Below is a data report of the data extracted from your Google data package. This is the data that 
-        will be donated to the research study. The rest of the data is not stored or sent to the research 
-        study.`;
+        return `By clicking consent, you consent to donate the extracted data to the research study. Below is a data 
+        report of the data extracted from your Google data package. This is the data that will be donated to the research 
+        study. The rest of the data is not stored or sent to the research study.`;
     case 4:
-        return `Thank you for your donating data to this research. Please click the button below to fill 
-        out the survey.`;
+        return `The data donation procedure is completed. Please click to go the next part of the research and fill out 
+        the survey.`;
     default:
       return 'Unknown step';
   }
@@ -220,7 +211,7 @@ export default function DonationAlfaR1() {
                                     />
                                     <label htmlFor="contained-button-file">
                                         <Button variant="contained" color="primary" component="span" className={classes.button}>
-                                        Upload
+                                        Select file
                                         </Button>
                                     </label>
                                     </div>
@@ -249,10 +240,10 @@ export default function DonationAlfaR1() {
                                 </Grid>
                                 <Grid className={classes.scriptContainer} >
                                 {activeStep === 2 && (
-                                    <ScriptBase />
+                                    <ScriptBaseAlfa />
                                 )}
                                 {activeStep === 3 && (
-                                    <DataFeedback />
+                                    <DataFeedbackBaseAlfa />
                                 )}
                                 </Grid>
                             </div>

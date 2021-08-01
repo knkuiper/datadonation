@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ScriptBase() {
+export default function ScriptBaseAlfa() {
     const classes = useStyles();
 
     return (
@@ -52,14 +52,21 @@ export default function ScriptBase() {
             spacing={3}>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                    <Typography gutterBottom variant="h5" color="error">
-                    Script
+                    <Typography paragraph variant="h5" color="error">
+                    How your data is anonymized
                     </Typography>
-                    <Typography gutterBottom variant="body1" color="error">
-                    The script used to extract the relevant data from your data package.
+
+                    <Typography paragraph variant="body1" color="error">
+                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
+                    Google semantic Location History data for January in 2019, 2020, and 2021.
+                    </Typography>
+
+                    <Typography paragraph variant="body1" color="error">
+                    Below is the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                     <Typography gutterBottom variant="body2" color="error">
                         <code>
+                            <br />
                             import json<br/>
                             import itertools<br/>
                             import re<br/>
@@ -70,12 +77,12 @@ export default function ScriptBase() {
                             YEARS = [2019, 2020, 2021]<br/>
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic.
-                            We therefore examined your Google semantic Location History data for January in 2019,
-                            2020, and 2021. To be precise, we extracted per month the total number of visited places,
-                            and the number of days spend per place for the three most visited places. Also, we extracted
-                            the number of days spend in places and travelling, and the travelled distance in km."
-                            <br/>
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
+                            your Google semantic Location History data for January in 2019, 2020, and 2021." {/*To be precise,
+                            we extracted per month the total number of visited places, and the number of days spend per
+                            place for the three most visited places. Also, we extracted the number of days spend in places
+                            and travelling, and the travelled distance in km."*/}
+                            <br />
                             <br/>
                             
                             def __visit_duration(data):<br/>

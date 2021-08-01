@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ScriptHigh() {
+export default function ScriptHighBeta() {
     const classes = useStyles();
 
     return (
@@ -52,21 +52,36 @@ export default function ScriptHigh() {
             spacing={3}>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                    <Typography gutterBottom variant="h5" color="error">
-                    The anonymization explanation in high construal level
+                    <Typography paragraph variant="h5" color="error">
+                    How your data is anonymized
                     </Typography>
-                    <Typography gutterBottom variant="body1" color="error">
-                    The explanation here
+                    
+                    <Typography paragraph variant="body1" color="error">
+                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
+                    Google semantic Location History data for January in 2019, 2020, and 2021.
                     </Typography>
-                    <Typography gutterBottom variant="h5" color="error">
-                    Script
+
+                    <Typography paragraph variant="body1" color="error">
+                    <em>!REMOVE! Explanation in high (abstract) level here !REMOVE!</em>
                     </Typography>
-                    <Typography gutterBottom variant="body1" color="error">
-                    The script used to extract the relevant data from your data package.
+
+                    <Typography paragraph variant="body1" color="error">
+                    Only the data relevant to the research study is extracted from the data package. 
+                    The data will be anonymized so that no identifying information will be included data that is donated to
+                    the research.
+
+                    From each month per year, we extract the total number of visited places, and the number of days
+                    spent per place for the three most visited places. Also, we extract the number of days spent in
+                    places and travelling, and the travelled distance in kilometers.
                     </Typography>
-                
+                    
+                    <Typography paragraph variant="body1" color="error">
+                    Below is the script used to anonymize your data and extract the relevant data from your data package.
+                    </Typography>
+            
                     <Typography gutterBottom variant="body2" color="error">
                         <code>
+                            <br />
                             import json<br/>
                             import itertools<br/>
                             import re<br/>
@@ -77,11 +92,8 @@ export default function ScriptHigh() {
                             YEARS = [2019, 2020, 2021]<br/>
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic.
-                            We therefore examined your Google semantic Location History data for January in 2019,
-                            2020, and 2021. To be precise, we extracted per month the total number of visited places,
-                            and the number of days spend per place for the three most visited places. Also, we extracted
-                            the number of days spend in places and travelling, and the travelled distance in km."
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
+                            your Google semantic Location History data for January in 2019, 2020, and 2021."
                             <br/>
                             <br/>
                             

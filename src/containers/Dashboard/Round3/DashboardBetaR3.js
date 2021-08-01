@@ -60,8 +60,8 @@ export default function DashboardBetaR3() {
                     }
                 />
                 <CardContent>
-                    <Typography variant="subtitle1" color="textPrimary">
-                        How much did the % of time you spent inside and outside your home change because of the covid-lockdown?
+                    <Typography paragraph variant="subtitle1" color="textPrimary">
+                        How much did the time spent inside and outside your home change due to COVID-19 lockdowns?
                     </Typography>
                     <Typography variant="subtitle1" paragraph color="textPrimary">
                         The research study will examine your Google semantic Location History data of January 2019, 2020 and 2021.
@@ -70,7 +70,7 @@ export default function DashboardBetaR3() {
                         We respect your privacy. Your data donation is anonymous.
                     </Typography>
                     <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from July to August 2021
+                        Available from July 2021
                     </Typography>
                     <Typography variant="subtitle2" color="textPrimary">
                         Open for data donation
@@ -84,77 +84,77 @@ export default function DashboardBetaR3() {
                 </CardActions>
             </Card>
         </Grid>
-        <Grid item xs={12} className={classes.title}>
-            <Typography variant="h5" color="textPrimary">
-                Upcoming studies 2
-            </Typography>
-        </Grid>
-        <Grid item xs={4} className={classes.cardGrid}>
-            <Card className={classes.cardContainer}>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
-                    }
-                    title={
-                        <Typography variant="h6" component="h6">
-                            Changes in internet search patterns during Covid lockdowns
-                        </Typography>
-                    }
-                />
-                <CardContent>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        The research study will examine your Google search history of January 2019, 2020 and 2021.
+                <Grid item xs={12} className={classes.title}>
+                    <Typography variant="h5" color="textPrimary">
+                        Upcoming studies 2
                     </Typography>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        We respect your privacy. Your data donation is anonymous.
-                    </Typography>
-                    <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from August 2021
-                    </Typography>
-                    <Typography variant="subtitle2" color="textPrimary">
-                        Not open for data donation
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <Button variant="contained" disabled className={classes.button}>
-                        Donate data
-                    </Button>
-                </CardActions>
-            </Card>
-        </Grid>
-        <Grid item xs={4} className={classes.cardGrid}>
-            <Card className={classes.cardContainer}>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
-                    }
-                    title={
-                        <Typography variant="h6" component="h6">
-                            Changes in streaming habits  during Covid lockdowns
-                        </Typography>
-                    }
-                />
-                <CardContent>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        The research study will examine your Netflix viewing history of January 2019, 2020 and 2021.
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        We respect your privacy. Your data donation is anonymous.
-                    </Typography>
-                    <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from October 2021
-                    </Typography>
-                    <Typography variant="subtitle2" color="textPrimary">
-                        Not open for data donation
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <Button variant="contained" disabled className={classes.button}>
-                        Donate data
-                    </Button>
-                </CardActions>
-            </Card>
-        </Grid>
+                </Grid>
+                <Grid item xs={4} className={classes.cardGrid}>
+                    <Card className={classes.cardContainer}>
+                        <CardHeader
+                            avatar={
+                                <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
+                            }
+                            title={
+                                <Typography variant="h6" component="h6">
+                                    Changes in internet search patterns during COVID-19 lockdowns
+                                </Typography>
+                            }
+                        />
+                        <CardContent>
+                            <Typography variant="subtitle1" paragraph color="textPrimary">
+                                The research study will examine your Google search history of January 2019, 2020 and 2021.
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph color="textPrimary">
+                                We respect your privacy. Your data donation is anonymous.
+                            </Typography>
+                            <Typography variant="subtitle2" paragraph color="textPrimary">
+                                Available from September 2021
+                            </Typography>
+                            <Typography variant="subtitle2" color="textPrimary">
+                                Not open for data donation
+                            </Typography>
+                        </CardContent>
+                        <CardActions disableSpacing>
+                            <Button variant="contained" disabled className={classes.button}>
+                                Donate data
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+                <Grid item xs={4} className={classes.cardGrid}>
+                    <Card className={classes.cardContainer}>
+                        <CardHeader
+                            avatar={
+                                <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
+                            }
+                            title={
+                                <Typography variant="h6" component="h6">
+                                    Changes in streaming habits during COVID-19 lockdowns
+                                </Typography>
+                            }
+                        />
+                        <CardContent>
+                            <Typography variant="subtitle1" paragraph color="textPrimary">
+                                The research study will examine your Netflix viewing history of January 2019, 2020 and 2021.
+                            </Typography>
+                            <Typography variant="subtitle1" paragraph color="textPrimary">
+                                We respect your privacy. Your data donation is anonymous.
+                            </Typography>
+                            <Typography variant="subtitle2" paragraph color="textPrimary">
+                                Available from October 2021
+                            </Typography>
+                            <Typography variant="subtitle2" color="textPrimary">
+                                Not open for data donation
+                            </Typography>
+                        </CardContent>
+                        <CardActions disableSpacing>
+                            <Button variant="contained" disabled className={classes.button}>
+                                Donate data
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
         </Grid>
         </>
     );

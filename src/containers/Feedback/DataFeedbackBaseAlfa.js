@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiTableCell from "@material-ui/core/TableCell";
 import { Grid, Paper, Typography, Table, TableBody, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import ScriptBase from '../Script/ScriptBaseAlfa';
 
 const TableCell = withStyles({
     root: {
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.paper.dark,
     },
     table: {
-        minWidth: 650,
+        width: 450,
     },
 }));
 
@@ -35,7 +34,7 @@ const rows = [
     createData('2021', 'January', 18, 29.449, 1.55, 340.939, 22.618, 1.178, 0.707),
 ];
 
-export default function DataFeedback() {
+export default function DataFeedbackBaseAlfa() {
     const classes = useStyles();
 
     return (
@@ -44,19 +43,22 @@ export default function DataFeedback() {
                 direction="row"
                 justify="center"
                 alignItems="center"
-                spacing={3}>
+                spacing={2}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <Typography gutterBottom variant="h5" color="error">
-                            Data feedback
+                        Data feedback
                         </Typography>
                         <Typography gutterBottom variant="body1" color="error">
-                            This study examines the change in travel behaviour during the COVID-19 pandemic.
-                            We therefore examined your Google semantic Location History data for January in 2019, 
-                            2020, and 2021. To be precise, we extracted per month the total number of visited places, 
-                            and the number of days spend per place for the three most visited places. Also, we extracted 
-                            the number of days spend in places and travelling, and the travelled distance in km.                        
+                        This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
+                        your Google semantic Location History data for January in 2019, 2020, and 2021. 
                         </Typography>
+                        <Typography gutterBottom variant="body1" color="error">
+                        {/*To be precise, we extracted per month the total number of visited places, and the number of days 
+                        spend per place for the three most visited places. Also, we extracted the number of days spend in 
+                        places and travelling, and the travelled distance in km.*/}
+                        </Typography>
+                        <br />
                         <TableContainer>
                             <Table className={classes.table} size="small" aria-label="simple table">
                                 <TableHead>
@@ -92,7 +94,6 @@ export default function DataFeedback() {
                             </Table>
                         </TableContainer>
                     </Paper>
-                    {/* <ScriptBase /> Include script and explanation in this step as well */}
                 </Grid>
             </Grid>
         </>
