@@ -1,3 +1,5 @@
+/// Script for version Alfa - baseline version with only the script
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper, Typography } from '@material-ui/core';
@@ -54,7 +56,7 @@ export default function ScriptBase() {
                     Script
                     </Typography>
                     <Typography gutterBottom variant="body1" color="error">
-                    The script that is used to extract the relevant data from your data package.
+                    The script used to extract the relevant data from your data package.
                     </Typography>
                     <Typography gutterBottom variant="body2" color="error">
                         <code>

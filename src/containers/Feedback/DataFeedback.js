@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiTableCell from "@material-ui/core/TableCell";
 import { Grid, Paper, Typography, Table, TableBody, TableContainer, TableHead, TableRow } from '@material-ui/core';
+import ScriptBase from '../Script/ScriptBase';
 
 const TableCell = withStyles({
     root: {
@@ -91,6 +92,7 @@ export default function DataFeedback() {
                             </Table>
                         </TableContainer>
                     </Paper>
+                    {/* <ScriptBase /> Include script and explanation in this step as well */}
                 </Grid>
             </Grid>
         </>

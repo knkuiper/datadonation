@@ -1,9 +1,12 @@
+/// Donation page for version Beta - High construal version with high level explanation + the script
+/// For round 1 of experiment, links to qualtrics survey Beta round 1
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptHigh from '../Script/ScriptHigh';
-import DataFeedback from '../Feedback/DataFeedback';
-import UUlogo from '../../assets/img/UU_logo.png';
+import ScriptHigh from '../../Script/ScriptHigh';
+import DataFeedback from '../../Feedback/DataFeedback';
+import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,7 +70,7 @@ function getStepContent(step) {
   }
 }
 
-export default function DonationHigh() {
+export default function DonationBetaR1() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -231,7 +234,8 @@ export default function DonationHigh() {
                                             </Button>
                                         )}
                                         {activeStep === 4 && (
-                                            <Button variant="contained" color="secondary" href="https://qualtrics.com" className={classes.button}>
+                                            <Button variant="contained" color="secondary" href="" className={classes.button}>
+                                            {/* Change to final version of survey beta round 1, only pilot link now */}
                                                 Go to survey
                                             </Button>
                                         )}

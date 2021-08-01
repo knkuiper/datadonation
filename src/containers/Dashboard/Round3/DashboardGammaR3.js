@@ -1,7 +1,10 @@
+/// Dashboard page for version Gamma - high construal version with high level explanation + the script
+/// For round 3 of experiment, links to donation page Gamma round 3
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, CardHeader, CardContent, CardActions, Avatar, Button, Typography } from '@material-ui/core';
-import UUlogo from '../../assets/img/UU_logo.png';
+import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Dashboard() {
+export default function DashboardGammaR3() {
     const classes = useStyles();
 
     return (
@@ -74,7 +77,8 @@ export default function Dashboard() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/donationC" className={classes.button}>
+                    <Button variant="contained" color="primary" href="/donationC3" className={classes.button}>
+                    {/* Link to the Gamma round 3 donation page, donationC3 */}
                         Donate data
                     </Button>
                 </CardActions>
