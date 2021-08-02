@@ -1,9 +1,9 @@
-import React from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+// HashRouter
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
 import DashboardHome from '../Dashboard/DashboardHome';
-
 // Round 1 
   // versions
   import DashboardAlfaR1 from '../Dashboard/Round1/DashboardAlfaR1';
@@ -87,51 +87,53 @@ const theme = createMuiTheme({
     },*/
 });
 
-function App() {
-  return (
-    <MuiThemeProvider theme={theme} id="root">
-      <HashRouter>
-        <div>
-          <Header />
-          <Switch>
-            <Route path="/Data-donation-web-app/home" exact component={ DashboardHome } /> {/* Dashboard home page */}
+class App extends Component {
+  render() {
+    return (
+      <MuiThemeProvider theme={theme} id="root">
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Switch>
+              <Route path="/Data-donation-web-app/home" component={ DashboardHome } /> {/* Dashboard home page */}
 
-            <Route path="/Data-donation-web-app/dashboardA1" exact component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
-            <Route path="/Data-donation-web-app/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
+              <Route path="/Data-donation-web-app/dashboardA1" component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
+              <Route path="/Data-donation-web-app/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
 
-            <Route path="/Data-donation-web-app/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
-            <Route path="/Data-donation-web-app/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
+              <Route path="/Data-donation-web-app/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
+              <Route path="/Data-donation-web-app/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
 
-            <Route path="/Data-donation-web-app/dashboardC1" component={ DashboardGammaR1 } />  {/* Dashboard Gamma, Round 1 */}
-            <Route path="/Data-donation-web-app/donationC1" component={ DonationGammaR1 } />    {/* Donation Gamma, Round 1 */}
+              <Route path="/Data-donation-web-app/dashboardC1" component={ DashboardGammaR1 } />  {/* Dashboard Gamma, Round 1 */}
+              <Route path="/Data-donation-web-app/donationC1" component={ DonationGammaR1 } />    {/* Donation Gamma, Round 1 */}
 
-            <Route path="/Data-donation-web-app/dashboardA2" component={ DashboardAlfaR2 }/>    {/* Dashboard Alfa, Round 2 */}
-            <Route path="/Data-donation-web-app/donationA2" component={ DonationAlfaR2 } />     {/* Donation Alfa, Round 2 */}
+              <Route path="/Data-donation-web-app/dashboardA2" component={ DashboardAlfaR2 }/>    {/* Dashboard Alfa, Round 2 */}
+              <Route path="/Data-donation-web-app/donationA2" component={ DonationAlfaR2 } />     {/* Donation Alfa, Round 2 */}
 
-            <Route path="/Data-donation-web-app/dashboardB2" component={ DashboardBetaR2 } />   {/* Dashboard Beta, Round 2 */}
-            {/*<Route path="/Data-donation-web-app/donationB2" component={ DonationBetaR2 } />  {/* Donation Beta, Round 2 */}
+              <Route path="/Data-donation-web-app/dashboardB2" component={ DashboardBetaR2 } />   {/* Dashboard Beta, Round 2 */}
+              {/*<Route path="/Data-donation-web-app/donationB2" component={ DonationBetaR2 } />  {/* Donation Beta, Round 2 */}
 
-            <Route path="/Data-donation-web-app/dashboardC2" component={ DashboardGammaR2 } />  {/* Dashboard Gamma, Round 2 */}
-            {/*<Route path="/Data-donation-web-app/donationC2" component={ DonationGammaR2 } /> {/* Donation Gamma, Round 2 */}
+              <Route path="/Data-donation-web-app/dashboardC2" component={ DashboardGammaR2 } />  {/* Dashboard Gamma, Round 2 */}
+              {/*<Route path="/Data-donation-web-app/donationC2" component={ DonationGammaR2 } /> {/* Donation Gamma, Round 2 */}
 
-            <Route path="/Data-donation-web-app/dashboardA3" component={ DashboardAlfaR3 } />   {/* Dashboard Alfa, Round 3 */}
-            <Route path="/Data-donation-web-app/donationA3" component={ DonationAlfaR3 } />     {/* Donation Alfa, Round 3 */}
+              <Route path="/Data-donation-web-app/dashboardA3" component={ DashboardAlfaR3 } />   {/* Dashboard Alfa, Round 3 */}
+              <Route path="/Data-donation-web-app/donationA3" component={ DonationAlfaR3 } />     {/* Donation Alfa, Round 3 */}
 
-            <Route path="/Data-donation-web-app/dashboardB3" component={ DashboardBetaR3 } />    {/* Dashboard Beta, Round 3 */}
-            {/*<Route path="/Data-donation-web-app/donationB3" component={ DonationBetaR3 } />   {/* Donation Beta, Round 3 */}
+              <Route path="/Data-donation-web-app/dashboardB3" component={ DashboardBetaR3 } />    {/* Dashboard Beta, Round 3 */}
+              {/*<Route path="/Data-donation-web-app/donationB3" component={ DonationBetaR3 } />   {/* Donation Beta, Round 3 */}
 
-            <Route path="/Data-donation-web-app/dashboardC3" component={ DashboardGammaR3 } />    {/* Dashboard Gamma, Round 3 */}
-            {/*<Route path="/Data-donation-web-app/donationC3" component={ DonationGammaR3 } />   {/* Donation Gamma, Round 3 */}
+              <Route path="/Data-donation-web-app/dashboardC3" component={ DashboardGammaR3 } />    {/* Dashboard Gamma, Round 3 */}
+              {/*<Route path="/Data-donation-web-app/donationC3" component={ DonationGammaR3 } />   {/* Donation Gamma, Round 3 */}
+              
+              <Route path='/' >
+                <Redirect to="/Data-donation-web-app/home" />
+              </Route>
             
-            <Route path='/Data-donation-web-app/' >
-              <Redirect to="/home" />
-            </Route>
-          
-          </Switch> 
-        </div>
-      </HashRouter>
-    </MuiThemeProvider>
-  );
+            </Switch> 
+          </div>
+        </BrowserRouter>
+      </MuiThemeProvider>
+    );
+  }
 }
 
 export default App;
