@@ -89,7 +89,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme} id="root">
       <HashRouter>
         <div>
           <Header />
