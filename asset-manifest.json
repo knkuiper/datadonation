@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/data-donation-web-app/static/css/main.08d84b72.chunk.css",
-    "main.js": "/data-donation-web-app/static/js/main.437a239d.chunk.js",
-    "main.js.map": "/data-donation-web-app/static/js/main.437a239d.chunk.js.map",
+    "main.js": "/data-donation-web-app/static/js/main.3545d859.chunk.js",
+    "main.js.map": "/data-donation-web-app/static/js/main.3545d859.chunk.js.map",
     "runtime-main.js": "/data-donation-web-app/static/js/runtime-main.1cb4bb29.js",
     "runtime-main.js.map": "/data-donation-web-app/static/js/runtime-main.1cb4bb29.js.map",
-    "static/js/2.b2cd615b.chunk.js": "/data-donation-web-app/static/js/2.b2cd615b.chunk.js",
-    "static/js/2.b2cd615b.chunk.js.map": "/data-donation-web-app/static/js/2.b2cd615b.chunk.js.map",
+    "static/js/2.bca9ea97.chunk.js": "/data-donation-web-app/static/js/2.bca9ea97.chunk.js",
+    "static/js/2.bca9ea97.chunk.js.map": "/data-donation-web-app/static/js/2.bca9ea97.chunk.js.map",
     "static/js/3.47d13445.chunk.js": "/data-donation-web-app/static/js/3.47d13445.chunk.js",
     "static/js/3.47d13445.chunk.js.map": "/data-donation-web-app/static/js/3.47d13445.chunk.js.map",
     "index.html": "/data-donation-web-app/index.html",
     "static/css/main.08d84b72.chunk.css.map": "/data-donation-web-app/static/css/main.08d84b72.chunk.css.map",
-    "static/js/2.b2cd615b.chunk.js.LICENSE.txt": "/data-donation-web-app/static/js/2.b2cd615b.chunk.js.LICENSE.txt",
+    "static/js/2.bca9ea97.chunk.js.LICENSE.txt": "/data-donation-web-app/static/js/2.bca9ea97.chunk.js.LICENSE.txt",
     "static/media/UU_logo.0d85e760.png": "/data-donation-web-app/static/media/UU_logo.0d85e760.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1cb4bb29.js",
-    "static/js/2.b2cd615b.chunk.js",
+    "static/js/2.bca9ea97.chunk.js",
     "static/css/main.08d84b72.chunk.css",
-    "static/js/main.437a239d.chunk.js"
+    "static/js/main.3545d859.chunk.js"
   ]
 }
