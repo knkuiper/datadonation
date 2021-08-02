@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
 
@@ -89,7 +89,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Header />
           <Switch>
@@ -120,10 +120,10 @@ function App() {
             <Route path="/dashboardC3" component={ DashboardGammaR3 } />    {/* Dashboard Gamma, Round 3 */}
             {/*<Route path="/donationC3" component={ DonationGammaR3 } />   {/* Donation Gamma, Round 3 */}
             
-            {/*<Route path="/login" />
-            <Route path='/'>
+           
+            <Route path='/' >
               <Redirect to="/dashboard" />
-            </Route>*/}
+            </Route>
           
           </Switch> 
         </div>
