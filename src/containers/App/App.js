@@ -89,7 +89,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename="/Data-donation-web-app">
         <div>
           <Header />
           <Switch>
