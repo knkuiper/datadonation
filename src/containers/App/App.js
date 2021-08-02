@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
+import DashboardHome from '../Dashboard/DashboardHome';
 
 // Round 1 
   // versions
@@ -93,7 +94,9 @@ function App() {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/dashboardA1" component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
+            <Route exact path="/home" component={ DashboardHome } /> {/* Dashboard home page */}
+
+            <Route path="/dashboardA1" component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
             <Route path="/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
 
             <Route path="/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
@@ -120,10 +123,9 @@ function App() {
             <Route path="/dashboardC3" component={ DashboardGammaR3 } />    {/* Dashboard Gamma, Round 3 */}
             {/*<Route path="/donationC3" component={ DonationGammaR3 } />   {/* Donation Gamma, Round 3 */}
             
-            {/*
             <Route path='/' >
-              <Redirect to="/dashboardA1" />
-            </Route>*/}
+              <Redirect to="/home" />
+            </Route>
           
           </Switch> 
         </div>
