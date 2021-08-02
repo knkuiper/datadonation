@@ -2,6 +2,7 @@
 /// For round 1 of experiment, links to donation page Alfa round 1
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, CardHeader, CardContent, CardActions, Avatar, Button, Typography } from '@material-ui/core';
 import UUlogo from '../../../assets/img/UU_logo.png';
@@ -77,7 +78,7 @@ export default function DashboardAlfaR3() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/Data-donation-web-app/donationA3" className={classes.button}>
+                    <Button variant="contained" color="primary" component={Link} to="/donationA3" className={classes.button}>
                     {/* Link to the Alfa round 3 donation page, donationA3 */}
                         Donate data
                     </Button>

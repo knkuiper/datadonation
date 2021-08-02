@@ -2,6 +2,7 @@
 /// For round 1 of experiment, links to donation page Beta round 1
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, CardHeader, CardContent, CardActions, Avatar, Button, Typography } from '@material-ui/core';
 import UUlogo from '../../../assets/img/UU_logo.png';
@@ -77,7 +78,7 @@ export default function DashboardBetaR1() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/Data-donation-web-app/donationB1" className={classes.button}>
+                    <Button variant="contained" color="primary" component={Link} to="/donationB1" className={classes.button}>
                     {/* Link to the Beta round 1 donation page, donationB1 */}
                         Donate data
                     </Button>
