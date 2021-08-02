@@ -91,14 +91,14 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme} id="root">
-        <BrowserRouter>
+        <BrowserRouter basename="/Data-donation-web-app">
           <div>
             <Header />
             <Switch>
-              <Route path="/Data-donation-web-app/home" component={ DashboardHome } /> {/* Dashboard home page */}
+              <Route path="home" component={ DashboardHome } /> {/* Dashboard home page */}
 
-              <Route path="/Data-donation-web-app/dashboardA1" component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
-              <Route path="/Data-donation-web-app/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
+              <Route path="/dashboardA1" component={ DashboardAlfaR1 }/>   {/* Dashboard Alfa, Round 1 */}
+              <Route path="/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
 
               <Route path="/Data-donation-web-app/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
               <Route path="/Data-donation-web-app/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
@@ -125,7 +125,7 @@ class App extends Component {
               {/*<Route path="/Data-donation-web-app/donationC3" component={ DonationGammaR3 } />   {/* Donation Gamma, Round 3 */}
               
               <Route path='/' >
-                <Redirect to="/Data-donation-web-app/home" />
+                <Redirect to="/home" />
               </Route>
             
             </Switch> 
