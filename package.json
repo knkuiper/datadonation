@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://knkuiper.github.io/data-donation-web-app/",
+  "homepage": "https://knkuiper.github.io/Data-donation-web-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
