@@ -77,7 +77,7 @@ export default function DashboardBetaR3() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/donationB3" className={classes.button}>
+                    <Button variant="contained" color="primary" href="/Data-donation-web-app/donationB3" className={classes.button}>
                     {/* Link to the Beta round 3 donation page, donationB3 */}
                         Donate data
                     </Button>

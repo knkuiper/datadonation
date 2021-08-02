@@ -77,7 +77,7 @@ export default function DashboardGammaR2() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/donationC2" className={classes.button}>
+                    <Button variant="contained" color="primary" href="/Data-donation-web-app/donationC2" className={classes.button}>
                     {/* Link to the Gamma round 2 donation page, donationC2 */}
                         Donate data
                     </Button>

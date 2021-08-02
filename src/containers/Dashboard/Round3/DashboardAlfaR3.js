@@ -77,7 +77,7 @@ export default function DashboardAlfaR3() {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <Button variant="contained" color="primary" href="/donationA3" className={classes.button}>
+                    <Button variant="contained" color="primary" href="/Data-donation-web-app/donationA3" className={classes.button}>
                     {/* Link to the Alfa round 3 donation page, donationA3 */}
                         Donate data
                     </Button>
