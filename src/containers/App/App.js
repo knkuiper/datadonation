@@ -91,7 +91,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme} id="root">
-        <HashRouter basename="/Data-donation-web-app">
+        <HashRouter> {/*basename="/Data-donation-web-app"*/}
           <div>
             <Header />
             <Switch>

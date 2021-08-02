@@ -55,7 +55,7 @@ export default function DashboardGammaR3() {
                     }
                     title={
                         <Typography variant="h6" component="h6">
-                            Changes in movement during Covid lockdowns
+                            Changes in movement during COVID-19 lockdowns
                         </Typography>
                     }
                 />

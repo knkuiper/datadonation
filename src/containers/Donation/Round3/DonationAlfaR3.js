@@ -267,7 +267,7 @@ export default function DonationAlfaR3() {
                 <b>About data donation</b>
                 </Typography>
                 <Typography gutterBottom variant="body1">
-                    You are donating your <em>Google semantic Location History</em> to the research study <b>Changes in movement during Covid lockdowns.</b>
+                    You are donating your <em>Google semantic Location History</em> to the research study <b>Changes in movement during COVID-19 lockdowns.</b>
                     The research is executed by Utrecht University.
                 </Typography>
                 <Typography gutterBottom variant="body1">
