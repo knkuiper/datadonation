@@ -122,7 +122,7 @@ function App() {
             
            
             <Route path='/' >
-              <Redirect to="/dashboard" />
+              <Redirect to="/dashboardA1" />
             </Route>
           
           </Switch> 
