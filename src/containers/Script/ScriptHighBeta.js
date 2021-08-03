@@ -59,7 +59,11 @@ export default function ScriptHighBeta() {
                     
                     <Typography paragraph variant="body1" color="error">
                     This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
-                    Location History data for January in 2019, 2020, and 2021. We only extract the location data from the Google data
+                    Location History data for January in 2019, 2020, and 2021. 
+                    </Typography>
+
+                    <Typography paragraph variant="body1" color="error">
+                    We only extract the location data from the Google data
                     package, as this is the data the needed for the researchers to investigate the research questions. The identifying
                     information is anonymized, so that no personal data is included in the data you donate to the research study.
                     </Typography>

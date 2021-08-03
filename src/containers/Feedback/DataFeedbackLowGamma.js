@@ -52,10 +52,14 @@ export default function DataFeedbackLowGamma() {
                         </Typography>
 
                         <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
-                        Location History data for January in 2019, 2020, and 2021. We only extract relevant location data from the Google
-                        data package by looking at the places visited and activities from January 2019, 2020, and 2021. Any direct identifying
-                        address information are anonymized by replacing the address name with number placeholders such as “Place 1” etc.
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
+                        semantic Location History data for January in 2019, 2020, and 2021.
+                        </Typography>
+
+                        <Typography paragraph variant="body1" color="error">
+                        We only extract relevant location data from the Google data package by looking at the places visited and 
+                        activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
+                        replacing the address name with number placeholders such as “Place 1” etc.
                         </Typography>
 
                         <Typography paragraph variant="body1" color="error">
