@@ -53,7 +53,7 @@ export default function ScriptBaseAlfa() {
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
                     <Typography paragraph variant="h5" color="error">
-                    How your data is anonymized
+                    How your data is extracted and anonymized
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">
@@ -78,10 +78,7 @@ export default function ScriptBaseAlfa() {
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
                             TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
-                            your Google semantic Location History data for January in 2019, 2020, and 2021." {/*To be precise,
-                            we extracted per month the total number of visited places, and the number of days spend per
-                            place for the three most visited places. Also, we extracted the number of days spend in places
-                            and travelling, and the travelled distance in km."*/}
+                            your Google semantic Location History data for January in 2019, 2020, and 2021."
                             <br />
                             <br/>
                             

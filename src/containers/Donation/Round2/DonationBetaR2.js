@@ -1,5 +1,5 @@
 /// Donation page for version Beta - High construal version with high level explanation + the script
-/// For round 1 of experiment, links to qualtrics survey Beta round 1
+/// For round 2 of experiment, links to qualtrics survey Beta round 2
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -67,7 +67,7 @@ function getStepContent(step) {
     }
 }
 
-export default function DonationBetaR1() {
+export default function DonationBetaR2() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -232,7 +232,7 @@ export default function DonationBetaR1() {
                                         )}
                                         {activeStep === 4 && (
                                             <Button variant="contained" color="secondary" href="" className={classes.button}>
-                                            {/* Change to final version of survey beta round 1, only pilot link now */}
+                                            {/* Change to final version of survey beta round 2, only pilot link now */}
                                                 Go to survey
                                             </Button>
                                         )}

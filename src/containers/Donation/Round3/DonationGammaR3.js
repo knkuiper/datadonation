@@ -1,11 +1,11 @@
-/// Donation page for version Beta - High construal version with high level explanation + the script
-/// For round 1 of experiment, links to qualtrics survey Beta round 1
+/// Donation page for version Gamma - Low construal version with low level explanation + the script
+/// For round 3 of experiment, links to qualtrics survey Gamma round 3
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptHighBeta from '../../Script/ScriptHighBeta';
-import DataFeedbackHighBeta from '../../Feedback/DataFeedbackHighBeta';
+import ScriptLowGamma from '../../Script/ScriptLowGamma';
+import DataFeedbackLowGamma from '../../Feedback/DataFeedbackLowGamma';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -67,7 +67,7 @@ function getStepContent(step) {
     }
 }
 
-export default function DonationBetaR1() {
+export default function DonationGammaR3() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -166,7 +166,7 @@ export default function DonationBetaR1() {
                     const stepProps = {};
                     const buttonProps = {};
                     if (isStepOptional(index)) {
-                       // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
+                        // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
                     }
                     if (isStepSkipped(index)) {
                         stepProps.completed = false;
@@ -232,17 +232,17 @@ export default function DonationBetaR1() {
                                         )}
                                         {activeStep === 4 && (
                                             <Button variant="contained" color="secondary" href="" className={classes.button}>
-                                            {/* Change to final version of survey beta round 1, only pilot link now */}
+                                            {/* Change to final version of survey gamma round 3 */}
                                                 Go to survey
                                             </Button>
                                         )}
                                     </Grid>
                                     <Grid className={classes.scriptContainer} >
                                         {activeStep === 2 && (
-                                            <ScriptHighBeta />
+                                            <ScriptLowGamma />
                                         )}
                                         {activeStep === 3 && (
-                                            <DataFeedbackHighBeta />
+                                            <DataFeedbackLowGamma />
                                         )}
                                     </Grid>
                                 </div>

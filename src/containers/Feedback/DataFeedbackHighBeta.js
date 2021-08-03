@@ -46,20 +46,24 @@ export default function DataFeedbackHighBeta() {
                 spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
+                        {/* Explanation in high/abstract level - why */}
                         <Typography gutterBottom variant="h5" color="error">
                         Data feedback
                         </Typography>
-                        <Typography gutterBottom variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic. We examined 
-                        your Google semantic Location History data for January in 2019, 2020, and 2021.
-                        </Typography>
-                        <Typography gutterBottom variant="body1" color="error">
-                        <em>REMOVE Explanation in high level here</em> <br />
 
-                        To be precise, we extracted per month the total number of visited places, and the number of days
-                        spend per place for the three most visited places. Also, we extracted the number of days spend in 
-                        places and travelling, and the travelled distance in km.                        
+                        <Typography paragraph variant="body1" color="error">
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                        Location History data for January in 2019, 2020, and 2021. We only extract the location data from the Google data
+                        package, as this is the data the needed for the researchers to investigate the research questions. The identifying
+                        information is anonymized, so that no personal data is included in the data you donate to the research study.
                         </Typography>
+
+                        <Typography paragraph variant="body1" color="error">
+                        The total number of visited places, and the time spent per place are extracted for the three most visited places.
+                        The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
+                        extracted data is written out as a new dataset ready to be donated to the research study.
+                        </Typography>
+
                         <TableContainer>
                             <Table className={classes.table} size="small" aria-label="simple table">
                                 <TableHead>

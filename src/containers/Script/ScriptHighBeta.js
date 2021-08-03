@@ -52,27 +52,22 @@ export default function ScriptHighBeta() {
             spacing={3}>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
+                    {/* Explanation in high/abstract level - why */}
                     <Typography paragraph variant="h5" color="error">
-                    How your data is anonymized
+                    How your data is extracted and anonymized  (high/abstract level)
                     </Typography>
                     
                     <Typography paragraph variant="body1" color="error">
-                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
-                    Google semantic Location History data for January in 2019, 2020, and 2021.
+                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                    Location History data for January in 2019, 2020, and 2021. We only extract the location data from the Google data
+                    package, as this is the data the needed for the researchers to investigate the research questions. The identifying
+                    information is anonymized, so that no personal data is included in the data you donate to the research study.
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">
-                    <em>!REMOVE! Explanation in high (abstract) level here !REMOVE!</em>
-                    </Typography>
-
-                    <Typography paragraph variant="body1" color="error">
-                    Only the data relevant to the research study is extracted from the data package. 
-                    The data will be anonymized so that no identifying information will be included data that is donated to
-                    the research.
-
-                    From each month per year, we extract the total number of visited places, and the number of days
-                    spent per place for the three most visited places. Also, we extract the number of days spent in
-                    places and travelling, and the travelled distance in kilometers.
+                    The total number of visited places, and the time spent per place are extracted for the three most visited places.
+                    The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
+                    extracted data is written out as a new dataset ready to be donated to the research study.
                     </Typography>
                     
                     <Typography paragraph variant="body1" color="error">

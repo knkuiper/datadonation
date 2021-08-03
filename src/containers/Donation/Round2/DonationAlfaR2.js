@@ -53,16 +53,15 @@ function getSteps() {
 function getStepContent(step) {
     switch (step) {
         case 0:
-            return `If you have not requested your data from Google, go to Google Takeout and follow the instructions 
-            to request your Google location data.`;
+            return `If you have not already requested your data from Google, go to Google Takeout and follow the instructions 
+            to request your location data.`;
         case 1:
             return `Once you have saved your data package from Google to your device, select the data file (a zip file) 
             to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
         case 2:
             return `By processing the data, the data relevant for this research will be extracted from your data package. 
             The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
-            the next step for your consent. The script that is used to extract the relevant data from your data package, 
-            is shown below.`;
+            the next step for your consent.`;
         case 3:
             return `By clicking consent, you consent to donate the extracted data to the research study. Below is a data 
             report of the data extracted from your Google data package. This is the data that will be donated to the research 
