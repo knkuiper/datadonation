@@ -1,3 +1,10 @@
+
+Web app for research study on data donation for Msc Thesis Human-Computer Interaction at Utrecht University.
+
+Link to github pages for the data donation interface https://knkuiper.github.io/Data-donation-web-app/
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
