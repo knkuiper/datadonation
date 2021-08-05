@@ -54,7 +54,7 @@ export default function ScriptLowGamma() {
                 <Paper className={classes.paper}>
                     {/* Explanation in low/concrete level - how */}
                     <Typography paragraph variant="h5" color="error">
-                    How your data is extracted and anonymized (low/concrete level)
+                    How your data is extracted and anonymized
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">

@@ -54,7 +54,7 @@ export default function ScriptHighBeta() {
                 <Paper className={classes.paper}>
                     {/* Explanation in high/abstract level - why */}
                     <Typography paragraph variant="h5" color="error">
-                    How your data is extracted and anonymized  (high/abstract level)
+                    How your data is extracted and anonymized
                     </Typography>
                     
                     <Typography paragraph variant="body1" color="error">
