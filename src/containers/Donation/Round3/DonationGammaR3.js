@@ -231,8 +231,8 @@ export default function DonationGammaR3() {
                                             </Button>
                                         )}
                                         {activeStep === 4 && (
-                                            <Button variant="contained" color="secondary" href="" className={classes.button}>
-                                            {/* Change to final version of survey gamma round 3 */}
+                                            <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_0ML3UAxCgNDw1w2" className={classes.button}>
+                                            {/* Final version survey Beta round 3 */}
                                                 Go to survey
                                             </Button>
                                         )}

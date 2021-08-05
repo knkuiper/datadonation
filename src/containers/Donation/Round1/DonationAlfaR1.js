@@ -231,8 +231,8 @@ export default function DonationAlfaR1() {
                                     </Button>
                                 )}
                                 {activeStep === 4 && (
-                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_4JxkgYi92ernXRc" className={classes.button}> 
-                                    {/* Change to final version of survey, only pilot link now */}
+                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_3JlIlDkCHcQrcy2" className={classes.button}>
+                                    {/* Final version survey Alfa round 1 */}
                                     Go to survey
                                     </Button>
                                 )}

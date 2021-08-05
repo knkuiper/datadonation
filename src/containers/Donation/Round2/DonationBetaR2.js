@@ -231,8 +231,8 @@ export default function DonationBetaR2() {
                                             </Button>
                                         )}
                                         {activeStep === 4 && (
-                                            <Button variant="contained" color="secondary" href="" className={classes.button}>
-                                            {/* Change to final version of survey beta round 2, only pilot link now */}
+                                            <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_6r2aaTmtC85J0xM" className={classes.button}>
+                                            {/* Final version survey Beta round 2 */}
                                                 Go to survey
                                             </Button>
                                         )}
