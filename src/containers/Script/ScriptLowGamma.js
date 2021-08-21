@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Card, Typography } from '@material-ui/core';
+import LowGammaGraphic from '../../assets/img/Concrete_gamma_graphic.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: 20,
     },
-    paper: {
+    card: {
         padding: theme.spacing(2),
         margin: 10,
         backgroundColor: theme.palette.paper.dark,
@@ -51,17 +52,19 @@ export default function ScriptLowGamma() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>
+                <Card className={classes.card}>
                     {/* Explanation in low/concrete level - how */}
                     <Typography paragraph variant="h5" color="error">
                     How your data is extracted and anonymized
                     </Typography>
 
-                    <Typography paragraph variant="body1" color="error">
-                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google 
-                    semantic Location History data for January in 2019, 2020, and 2021.
-                    </Typography>
+                   <div>
+                        <img src={LowGammaGraphic} alt="pipeline-explanation" width="790" />
+                    </div>
 
+                    <br />
+                    
+                    {/*
                     <Typography paragraph variant="body1" color="error">
                     We only extract relevant location data from the Google data package by looking at the places visited and 
                     activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
@@ -72,6 +75,12 @@ export default function ScriptLowGamma() {
                     The total number of visited places are extracted, and for the three most visited places the days spent per place are 
                     extracted. The days spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. 
                     The extracted data is written out as a new dataset ready to be donated to the research study.
+                    </Typography>
+                     */}
+
+                    <Typography paragraph variant="body1" color="error">
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
+                        semantic Location History data for January in 2019, 2020, and 2021.
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">
@@ -249,7 +258,7 @@ export default function ScriptLowGamma() {
                                 <div className={classes.indentOne}>{`}`}</div>
                         </code>
                     </Typography>    
-                </Paper>
+                </Card>
             </Grid>
         </Grid>
         </>

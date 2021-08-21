@@ -8,8 +8,8 @@ import UUlogo from '../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: 15,
         marginLeft: 30,
+        padding: theme.spacing(1),
     },
     title: {
         padding: 10,
@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
         padding: 20,
     },
     cardContainer: {
-        maxWidth: 345,
+        maxWidth: 350,
+        minWidth: 240,
+        minHeight: 450,
+        maxHeight: 800,
         padding: 10,
         backgroundColor: '#e3f2fd',
     },
@@ -37,92 +40,91 @@ export default function DashboardHome() {
     return (
         <>
         <Grid container
-            spacing={3}
             direction="row"
             justifyContent="flex-start"
             className={classes.root}
         >
-        <Grid item xs={12} className={classes.title}>
-            <Typography variant="h5" color="textPrimary">
-                Available studies 1
-            </Typography>
-        </Grid>
-        <Grid item xs={12} className={classes.cardGrid}>
-            <Card className={classes.cardContainer}>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
-                    }
-                    title={
-                        <Typography variant="h6" component="h6">
-                            Changes in movement during COVID-19 lockdowns
+            <Grid item xs={12} className={classes.title}>
+                <Typography variant="h5" color="textPrimary">
+                    Available studies 1
+                </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
+                <Card className={classes.cardContainer}>
+                    <CardHeader
+                        avatar={
+                            <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
+                        }
+                        title={
+                            <Typography variant="h6" component="h6">
+                                Changes in movement during COVID-19 lockdowns
+                            </Typography>
+                        }
+                    />
+                    <CardContent>
+                        <Typography paragraph variant="subtitle1" color="textPrimary">
+                            How much did the time spent inside and outside your home change due to COVID-19 lockdowns?
                         </Typography>
-                    }
-                />
-                <CardContent>
-                    <Typography paragraph variant="subtitle1" color="textPrimary">
-                        How much did the time spent inside and outside your home change due to COVID-19 lockdowns?
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        The research study will examine your Google semantic Location History data of January 2019, 2020 and 2021.
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        We respect your privacy. Your data donation is anonymous.
-                    </Typography>
-                    <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from July 2021
-                    </Typography>
-                    <Typography variant="subtitle2" color="textPrimary">
-                        Open for data donation
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <Button variant="contained" disabled className={classes.button}>
-                    {/* Not open for donation, only home page*/}
-                        Donate data
-                    </Button>
-                </CardActions>
-            </Card>
-        </Grid>
-        <Grid item xs={12} className={classes.title}>
-            <Typography variant="h5" color="textPrimary">
-                Upcoming studies 2
-            </Typography>
-        </Grid>
-        <Grid item xs={4} className={classes.cardGrid}>
-            <Card className={classes.cardContainer}>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
-                    }
-                    title={
-                        <Typography variant="h6" component="h6">
-                            Changes in internet search patterns during COVID-19 lockdowns
+                        <Typography variant="subtitle1" paragraph color="textPrimary">
+                            The research study will examine your Google semantic Location History data of January 2019, 2020 and 2021.
                         </Typography>
-                    }
-                />
-                <CardContent>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        The research study will examine your Google search history of January 2019, 2020 and 2021.
-                    </Typography>
-                    <Typography variant="subtitle1" paragraph color="textPrimary">
-                        We respect your privacy. Your data donation is anonymous.
-                    </Typography>
-                    <Typography variant="subtitle2" paragraph color="textPrimary">
-                        Available from September 2021
-                    </Typography>
-                    <Typography variant="subtitle2" color="textPrimary">
-                        Not open for data donation
-                    </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                    <Button variant="contained" disabled className={classes.button}>
-                        Donate data
-                    </Button>
-                </CardActions>
-            </Card>
-        </Grid>
-        <Grid item xs={4} className={classes.cardGrid}>
+                        <Typography variant="subtitle1" paragraph color="textPrimary">
+                            We respect your privacy. Your data donation is anonymous.
+                        </Typography>
+                        <Typography variant="subtitle2" paragraph color="textPrimary">
+                            Available from July 2021
+                        </Typography>
+                        <Typography variant="subtitle2" color="textPrimary">
+                            Open for data donation
+                        </Typography>
+                    </CardContent>
+                    <CardActions disableSpacing>
+                        <Button variant="contained" disabled className={classes.button}>
+                        {/* Not open for donation, only home page*/}
+                            Donate data
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={12} className={classes.title}>
+                <Typography variant="h5" color="textPrimary">
+                    Upcoming studies 2
+                </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
+                <Card className={classes.cardContainer}>
+                    <CardHeader
+                        avatar={
+                            <Avatar alt="UUlogo" src={UUlogo} className={classes.avatar} />
+                        }
+                        title={
+                            <Typography variant="h6" component="h6">
+                                Changes in internet search patterns during COVID-19 lockdowns
+                            </Typography>
+                        }
+                    />
+                    <CardContent>
+                        <Typography variant="subtitle1" paragraph color="textPrimary">
+                            The research study will examine your Google search history of January 2019, 2020 and 2021.
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph color="textPrimary">
+                            We respect your privacy. Your data donation is anonymous.
+                        </Typography>
+                        <Typography variant="subtitle2" paragraph color="textPrimary">
+                            Available from September 2021
+                        </Typography>
+                        <Typography variant="subtitle2" color="textPrimary">
+                            Not open for data donation
+                        </Typography>
+                    </CardContent>
+                    <CardActions disableSpacing>
+                        <Button variant="contained" disabled className={classes.button}>
+                            Donate data
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={

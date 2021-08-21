@@ -56,7 +56,7 @@ export default function DataFeedbackLowGamma() {
                         semantic Location History data for January in 2019, 2020, and 2021.
                         </Typography>
 
-                        <Typography paragraph variant="body1" color="error">
+                        {/*<Typography paragraph variant="body1" color="error">
                         We only extract relevant location data from the Google data package by looking at the places visited and 
                         activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
                         replacing the address name with number placeholders such as “Place 1” etc.
@@ -66,7 +66,7 @@ export default function DataFeedbackLowGamma() {
                         The total number of visited places are extracted, and for the three most visited places the days spent per place are
                         extracted. The days spent in places and in activity, as well as the travelled distance in kilometres, are also extracted.
                         The extracted data is written out as a new dataset ready to be donated to the research study.
-                        </Typography>
+                        </Typography>*/}
 
                         <TableContainer>
                             <Table className={classes.table} size="small" aria-label="simple table">

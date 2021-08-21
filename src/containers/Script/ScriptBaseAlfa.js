@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Card, Typography } from '@material-ui/core';
+import BaseAlfaGraphic from '../../assets/img/Baseline_alfa_graphic.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: 20,
     },
-    paper: {
+    card: {
         padding: theme.spacing(2),
         margin: 10,
         backgroundColor: theme.palette.paper.dark,
@@ -51,19 +52,27 @@ export default function ScriptBaseAlfa() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>
+                <Card className={classes.card}>
+                    {/* Explanation in baseline */}
                     <Typography paragraph variant="h5" color="error">
                     How your data is extracted and anonymized
                     </Typography>
 
+                    <div>   
+                        <img src={BaseAlfaGraphic} alt="pipeline-explanation" width="750" />
+                    </div>
+                    
+                    <br />
+
                     <Typography paragraph variant="body1" color="error">
-                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
-                    Google semantic Location History data for January in 2019, 2020, and 2021.
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
+                        Google semantic Location History data for January in 2019, 2020, and 2021.
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">
                     Below is the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
+                    
                     <Typography gutterBottom variant="body2" color="error">
                         <code>
                             <br />
@@ -235,7 +244,7 @@ export default function ScriptBaseAlfa() {
                                 <div className={classes.indentOne}>{`}`}</div>
                         </code>
                     </Typography>    
-                </Paper>
+                </Card>
             </Grid>
         </Grid>
         </>

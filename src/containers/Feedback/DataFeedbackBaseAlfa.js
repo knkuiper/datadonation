@@ -49,16 +49,18 @@ export default function DataFeedbackBaseAlfa() {
                         <Typography gutterBottom variant="h5" color="error">
                         Data feedback
                         </Typography>
+                       
                         <Typography gutterBottom variant="body1" color="error">
                         This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
                         your Google semantic Location History data for January in 2019, 2020, and 2021. 
                         </Typography>
-                        <Typography gutterBottom variant="body1" color="error">
-                        {/*To be precise, we extracted per month the total number of visited places, and the number of days 
+                       
+                        {/*<Typography gutterBottom variant="body1" color="error">
+                        To be precise, we extracted per month the total number of visited places, and the number of days 
                         spend per place for the three most visited places. Also, we extracted the number of days spend in 
-                        places and travelling, and the travelled distance in km.*/}
-                        </Typography>
-                        <br />
+                        places and travelling, and the travelled distance in km.
+                        </Typography>*/}
+                       
                         <TableContainer>
                             <Table className={classes.table} size="small" aria-label="simple table">
                                 <TableHead>

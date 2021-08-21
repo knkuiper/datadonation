@@ -56,7 +56,7 @@ export default function DataFeedbackHighBeta() {
                         Location History data for January in 2019, 2020, and 2021. 
                         </Typography>
 
-                        <Typography paragraph variant="body1" color="error">
+                        {/*<Typography paragraph variant="body1" color="error">
                         We only extract the location data from the Google data
                         package, as this is the data the needed for the researchers to investigate the research questions. The identifying
                         information is anonymized, so that no personal data is included in the data you donate to the research study.
@@ -66,7 +66,7 @@ export default function DataFeedbackHighBeta() {
                         The total number of visited places, and the time spent per place are extracted for the three most visited places.
                         The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
                         extracted data is written out as a new dataset ready to be donated to the research study.
-                        </Typography>
+                        </Typography>*/}
 
                         <TableContainer>
                             <Table className={classes.table} size="small" aria-label="simple table">

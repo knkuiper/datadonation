@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cardContainer: {
         maxWidth: 345,
+        minWidth: 200,
         padding: 10,
         backgroundColor: '#e3f2fd',
     },

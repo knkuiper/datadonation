@@ -49,10 +49,10 @@ function getStepContent(step) {
             return `If you have not already requested your data from Google, go to Google Takeout and follow the instructions 
             to request your location data.`;
         case 1:
-            return `Once you have saved your data package from Google to your device, select the data file (a zip file) 
+            return `Once you have saved your data package from Google to your device, select the data file (in ZIP format) 
             to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
         case 2:
-            return `By processing the data, the data relevant for this research will be extracted from your data package. 
+            return `By processing the data, the relevant data for this research will be extracted from your data package. 
             The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
             the next step for your consent.`;
         case 3:
@@ -255,7 +255,7 @@ export default function DonationGammaR3() {
             </Grid>
             
             <Grid item xs={2}>
-                <Typography gutterBottom variant="h5">
+                <Typography gutterBottom variant="h6">
                 <b>About data donation</b>
                 </Typography>
                 <Typography gutterBottom variant="body1">

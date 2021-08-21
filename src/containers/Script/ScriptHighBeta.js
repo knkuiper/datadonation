@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Card, Typography } from '@material-ui/core';
+import HighBetaGraphic from '../../assets/img/Abstract_beta_graphic.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: 20,
     },
-    paper: {
+    card: {
         padding: theme.spacing(2),
         margin: 10,
         backgroundColor: theme.palette.paper.dark,
@@ -51,21 +52,29 @@ export default function ScriptHighBeta() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12}>
-                <Paper className={classes.paper}>
+                <Card className={classes.card}>
                     {/* Explanation in high/abstract level - why */}
                     <Typography paragraph variant="h5" color="error">
                     How your data is extracted and anonymized
                     </Typography>
-                    
-                    <Typography paragraph variant="body1" color="error">
-                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
-                    Location History data for January in 2019, 2020, and 2021. 
-                    </Typography>
+
+                    <div>
+                        <img src={HighBetaGraphic} alt="pipeline-explanation" width="750" />
+                    </div>
+
+                    <br />
 
                     <Typography paragraph variant="body1" color="error">
-                    We only extract the location data from the Google data
-                    package, as this is the data the needed for the researchers to investigate the research questions. The identifying
-                    information is anonymized, so that no personal data is included in the data you donate to the research study.
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                        Location History data for January in 2019, 2020, and 2021.
+                    </Typography>
+
+                    {/*
+
+                    <Typography paragraph variant="body1" color="error">
+                    We only extract the location data from the Google data package, as this is the data the needed for the researchers 
+                    to investigate the research questions. The identifying information is anonymized, so that no personal data is 
+                    included in the data you donate to the research study.
                     </Typography>
 
                     <Typography paragraph variant="body1" color="error">
@@ -73,6 +82,7 @@ export default function ScriptHighBeta() {
                     The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
                     extracted data is written out as a new dataset ready to be donated to the research study.
                     </Typography>
+                    */}
                     
                     <Typography paragraph variant="body1" color="error">
                     Below is the script used to anonymize your data and extract the relevant data from your data package.
@@ -249,7 +259,7 @@ export default function ScriptHighBeta() {
                                 <div className={classes.indentOne}>{`}`}</div>
                         </code>
                     </Typography>    
-                </Paper>
+                </Card>
             </Grid>
         </Grid>
         </>

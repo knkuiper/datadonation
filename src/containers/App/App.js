@@ -96,7 +96,7 @@ class App extends Component {
             <Header />
             <Switch>
 
-              <Route path="/home" component={DashboardHome} />   {/* Dashboard home page */}
+              <Route path="/home" component={ DashboardHome } />   {/* Dashboard home page */}
               
               <Route path="/dashboardA1" component={ DashboardAlfaR1 } />  {/* Dashboard Alfa, Round 1 */}
               <Route path="/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
