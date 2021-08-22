@@ -11,11 +11,11 @@ import UUlogo from '../../../assets/img/UU_logo.png';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginTop: 20,
+        //marginTop: 20,
     },
     paper: {
         padding: theme.spacing(1),
-        margin: 10,
+        margin: 30,
         backgroundColor: theme.palette.paper.light,
     },
     progressContainer: {
@@ -25,11 +25,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'none',
     },
     button: {
-        marginTop: 20,
+        marginTop: theme.spacing(2),
         marginRight: theme.spacing(1),
     },
     actionsContainer: {
         marginBottom: theme.spacing(2),
+    },
+    infoContainer: {
+        margin: 30,
     },
 }));
 
@@ -153,8 +156,8 @@ export default function DonationBetaR2() {
         direction="row" 
         justify="center"
         alignItems="center"
-        spacing={3}>
-            <Grid item xs={8}>
+        >
+            <Grid item xs={12} sm={12} md={8} lg={8}>
             <Paper className={classes.paper}>
                 <Stepper 
                 activeStep={activeStep} 
@@ -254,7 +257,7 @@ export default function DonationBetaR2() {
             </Paper>
             </Grid>
             
-            <Grid item xs={2}>
+<Grid item xs={8} sm={8} md={2} lg={2} className={classes.infoContainer}>
                 <Typography gutterBottom variant="h6">
                 <b>About data donation</b>
                 </Typography>

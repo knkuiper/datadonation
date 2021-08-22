@@ -2,92 +2,129 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, Typography } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@material-ui/core';
+import clsx from 'clsx';
 import HighBetaGraphic from '../../assets/img/Abstract_beta_graphic.png';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        marginTop: 20,
+        padding: theme.spacing(2),
     },
     card: {
-        padding: theme.spacing(2),
-        margin: 10,
+        marginTop: 20,
+        padding: 15,
         backgroundColor: theme.palette.paper.dark,
+    },
+    media: {
+        width: "100%",
+    },
+    expand: {
+        //marginLeft: 'auto',
+        marginTop: -15,
+        transform: 'rotate(0deg)',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    },
+    expandOpen: {
+        transform: 'rotate(180deg)',
     },
     indentOne: {
         marginLeft: 20,
     },
     indentTwo: {
         marginLeft: 40,
-    }, 
+    },
     indentThree: {
         marginLeft: 60,
-    }, 
+    },
     indentFour: {
         marginLeft: 80,
-    }, 
+    },
     indentFive: {
         marginLeft: 100,
-    }, 
+    },
     indentSix: {
         marginLeft: 120,
-    }, 
+    },
     indentSeven: {
         marginLeft: 140,
     },
     indentEight: {
         marginLeft: 160,
-    }
+    },
 }));
 
 export default function ScriptHighBeta() {
     const classes = useStyles();
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
 
     return (
         <>
         <Grid container className={classes.root}
             direction="row"
-            justify="center"
-            alignItems="center"
-            spacing={3}>
-            <Grid item xs={12}>
-                <Card className={classes.card}>
-                    {/* Explanation in high/abstract level - why */}
-                    <Typography paragraph variant="h5" color="error">
-                    How your data is extracted and anonymized
-                    </Typography>
+            justifyContent="flex-start"
+        >
+        <Grid item>
+            <Card className={classes.card}>
+                {/* Explanation in high/abstract level - why */}
+                    <CardHeader
+                        title={<Typography paragraph variant="h5" color="error">
+                            How your data is extracted and anonymized
+                        </Typography>}
+                />
+                <CardMedia
+                    className={classes.media}
+                    component="img"
+                    image={HighBetaGraphic}
+                    title="pipeline-explanation"
+                />
+                <CardContent>
+                <Typography paragraph variant="body1" color="error">
+                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                    Location History data for January in 2019, 2020, and 2021.
+                </Typography>
 
-                    <div>
-                        <img src={HighBetaGraphic} alt="pipeline-explanation" width="750" />
-                    </div>
+                {/*
+                <Typography paragraph variant="body1" color="error">
+                We only extract the location data from the Google data package, as this is the data the needed for the researchers 
+                to investigate the research questions. The identifying information is anonymized, so that no personal data is 
+                included in the data you donate to the research study.
+                </Typography>
 
-                    <br />
-
+                <Typography paragraph variant="body1" color="error">
+                The total number of visited places, and the time spent per place are extracted for the three most visited places.
+                The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
+                extracted data is written out as a new dataset ready to be donated to the research study.
+                </Typography>
+                */}
+                </CardContent>
+                <CardActions>
+                    <IconButton
+                        className={clsx(classes.expand, {
+                            [classes.expandOpen]: expanded,
+                        })}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                    <ExpandMoreIcon
+                        color="error"
+                        fontSize="large"
+                    />
+                    </IconButton>
                     <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
-                        Location History data for January in 2019, 2020, and 2021.
+                        Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
-
-                    {/*
-
-                    <Typography paragraph variant="body1" color="error">
-                    We only extract the location data from the Google data package, as this is the data the needed for the researchers 
-                    to investigate the research questions. The identifying information is anonymized, so that no personal data is 
-                    included in the data you donate to the research study.
-                    </Typography>
-
-                    <Typography paragraph variant="body1" color="error">
-                    The total number of visited places, and the time spent per place are extracted for the three most visited places.
-                    The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
-                    extracted data is written out as a new dataset ready to be donated to the research study.
-                    </Typography>
-                    */}
-                    
-                    <Typography paragraph variant="body1" color="error">
-                    Below is the script used to anonymize your data and extract the relevant data from your data package.
-                    </Typography>
-            
+                </CardActions>
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <Typography gutterBottom variant="body2" color="error">
                         <code>
                             <br />
@@ -165,7 +202,7 @@ export default function ScriptHighBeta() {
                                 <div className={classes.indentOne}>return activity_duration</div>
                                 <br />
                                 <br />
-                               
+                            
                             def __activity_distance(data):
                                 <div className={classes.indentOne}>        
                                 """Get total distance of activities
@@ -259,8 +296,9 @@ export default function ScriptHighBeta() {
                                 <div className={classes.indentOne}>{`}`}</div>
                         </code>
                     </Typography>    
-                </Card>
-            </Grid>
+                </Collapse>
+            </Card>
+        </Grid>
         </Grid>
         </>
     );

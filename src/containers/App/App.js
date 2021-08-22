@@ -90,7 +90,7 @@ const theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider theme={theme} id="root">
+      <MuiThemeProvider theme={theme}>
         <HashRouter> {/* for BrowserRouter basename="/Data-donation-web-app"*/}
           <div>
             <Header />
@@ -124,7 +124,7 @@ class App extends Component {
 
               <Route path="/dashboardC3" component={ DashboardGammaR3 } />   {/* Dashboard Gamma, Round 3 */}
               <Route path="/donationC3" component={ DonationGammaR3 } />     {/* Donation Gamma, Round 3 */}
-              
+
               <Route path='/' >
                 <Redirect to="/home" />
               </Route>

@@ -9,8 +9,8 @@ import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: 15,
-        marginLeft: 30,
+        padding: theme.spacing(1),
+        paddingLeft: 30,
     },
     title: {
         padding: 10,
@@ -28,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         marginLeft: 'auto',
-        marginBottom: 5,
-        marginRight: 5,
     }
 }));
 
@@ -39,7 +37,6 @@ export default function DashboardGammaR1() {
     return (
         <>
         <Grid container
-            spacing={3}
             direction="row"
             justifyContent="flex-start"
             className={classes.root}
@@ -49,7 +46,7 @@ export default function DashboardGammaR1() {
                 Available studies 1
             </Typography>
         </Grid>
-        <Grid item xs={12} className={classes.cardGrid}>
+        <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={
@@ -91,7 +88,7 @@ export default function DashboardGammaR1() {
                         Upcoming studies 2
                     </Typography>
                 </Grid>
-                <Grid item xs={4} className={classes.cardGrid}>
+                <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
                     <Card className={classes.cardContainer}>
                         <CardHeader
                             avatar={
@@ -124,7 +121,7 @@ export default function DashboardGammaR1() {
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs={4} className={classes.cardGrid}>
+                <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
                     <Card className={classes.cardContainer}>
                         <CardHeader
                             avatar={

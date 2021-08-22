@@ -8,8 +8,8 @@ import UUlogo from '../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginLeft: 30,
         padding: theme.spacing(1),
+        paddingLeft: 30,
     },
     title: {
         padding: 10,
@@ -20,17 +20,15 @@ const useStyles = makeStyles((theme) => ({
         padding: 20,
     },
     cardContainer: {
-        maxWidth: 350,
-        minWidth: 240,
-        minHeight: 450,
-        maxHeight: 800,
+        maxWidth: 345,
+        minWidth: 200,
+        //minHeight: 450,
+        //maxHeight: 800,
         padding: 10,
         backgroundColor: '#e3f2fd',
     },
     button: {
         marginLeft: 'auto',
-        marginBottom: 5,
-        marginRight: 5,
     }
 }));
 
@@ -49,7 +47,7 @@ export default function DashboardHome() {
                     Available studies 1
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
+            <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
                 <Card className={classes.cardContainer}>
                     <CardHeader
                         avatar={
@@ -91,7 +89,7 @@ export default function DashboardHome() {
                     Upcoming studies 2
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
+            <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
                 <Card className={classes.cardContainer}>
                     <CardHeader
                         avatar={
@@ -124,7 +122,7 @@ export default function DashboardHome() {
                     </CardActions>
                 </Card>
             </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cardGrid}>
+        <Grid item xs={12} sm={12} md={6} lg={4} className={classes.cardGrid}>
             <Card className={classes.cardContainer}>
                 <CardHeader
                     avatar={

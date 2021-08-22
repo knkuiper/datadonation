@@ -5,9 +5,6 @@ import ScreenShareIcon from '@material-ui/icons/ScreenShare';
 //import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const useStyles = makeStyles((theme) => ({
-  login: {
-    marginLeft: 'auto',
-  },
   logo: {
     paddingRight: 10,
   }
