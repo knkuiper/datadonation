@@ -1,11 +1,11 @@
-/// Donation page for version Alfa - baseline version with only the script
-/// For round 2 of experiment, links to qualtrics surve Alfa round 2
+/// Donation page for version Alpha - baseline version with only the script
+/// For round 3 of experiment, links to qualtrics surve Alpha round 3 (redirects to post)
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptBaseAlfa from '../../Script/ScriptBaseAlfa';
-import DataFeedbackBaseAlfa from '../../Feedback/DataFeedbackBaseAlfa';
+import ScriptAlpha from '../../Script/ScriptAlpha';
+import DataFeedbackAlpha from '../../Feedback/DataFeedbackAlpha';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -70,7 +70,7 @@ function getStepContent(step) {
     }
 }
 
-export default function DonationAlfaR2() {
+export default function DonationAlphaR3() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -234,18 +234,18 @@ export default function DonationAlfaR2() {
                                     </Button>
                                 )}
                                 {activeStep === 4 && (
-                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_7VE6aKVqZqJCgxU" className={classes.button}>
-                                    {/* Final version survey Alfa round 2 */}
+                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_7Qx5HRx7IRefe2q" className={classes.button}>
+                                    {/* Final version survey Alpha round 3 */ }
                                         Go to survey
                                     </Button>
                                 )}
                                 </Grid>
                                 <Grid className={classes.scriptContainer} >
                                 {activeStep === 2 && (
-                                    <ScriptBaseAlfa />
+                                    <ScriptAlpha />
                                 )}
                                 {activeStep === 3 && (
-                                    <DataFeedbackBaseAlfa />
+                                    <DataFeedbackAlpha />
                                 )}
                                 </Grid>
                             </div>

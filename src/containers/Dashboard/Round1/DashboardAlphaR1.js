@@ -1,5 +1,5 @@
-/// Dashboard page for version Alfa - baseline version with only the script
-/// For round 1 of experiment, links to donation page Alfa round 1
+/// Dashboard page for version Alpha - baseline version with only the script
+/// For round 1 of experiment, links to donation page Alpha round 1
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function DashboardAlfaR1() {
+export default function DashboardAlphaR1() {
     const classes = useStyles();
 
     return (
@@ -77,7 +77,7 @@ export default function DashboardAlfaR1() {
                 </CardContent>
                 <CardActions disableSpacing>
                     <Button variant="contained" color="primary" component={Link} to="/donationA1" className={classes.button}>
-                    {/* Link to the Alfa round 1 donation page, donationA1 */}
+                    {/* Link to the Alpha round 1 donation page, donationA1 */}
                         Donate data
                     </Button>
                 </CardActions>

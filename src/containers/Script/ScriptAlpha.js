@@ -1,13 +1,15 @@
-/// Script for version Alfa - baseline version with only the script
+/// Script for version Alpha - baseline version with only the script
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
+//import CardMedia from '@material-ui/core';
 import clsx from 'clsx';
-import BaseAlfaGraphic from '../../assets/img/Baseline_alfa_graphic.png';
+//import AlphaBaseGraphic from '../../assets/img/AlphaBaseline_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
+import AlphaPipelineStepper from '../DataPipeline/AlphaPipelineStepper';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,14 +18,15 @@ const useStyles = makeStyles((theme) => ({
     card: {
         marginTop: 20,
         padding: 15,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'right',
         backgroundColor: theme.palette.paper.dark,
     },
     media: {
         width: "100%",
     },
     expand: {
-        //marginLeft: 'auto',
-        marginTop: -15,
         transform: 'rotate(0deg)',
         transition: theme.transitions.create('transform', {
             duration: theme.transitions.duration.shortest,
@@ -58,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
     
-export default function  ScriptBaseAlfa() {
+export default function  ScriptAlpha() {
     const classes = useStyles();
     const[expanded, setExpanded] = React.useState(false);
 
@@ -75,22 +78,19 @@ export default function  ScriptBaseAlfa() {
         <Grid item>
             <Card className={classes.card}>
                     {/* Explanation in baseline */}
-                <CardHeader
-                    title={<Typography paragraph variant="h5" color="error">
-                        How your data is extracted and anonymized
+                <CardHeader title={
+                    <Typography paragraph variant="h5" color="error">
+                        How your data is processed and prepared for data donation
                     </Typography>}
                 />
-                <CardMedia
+                {/*<CardMedia
                         className={classes.media}
                         component="img"
-                        image={BaseAlfaGraphic}
+                        image={AlphaBaseGraphic}
                         title="pipeline-explanation"
-                />
+                />*/}
                 <CardContent>
-                    <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
-                        Google semantic Location History data for January in 2019, 2020, and 2021.
-                    </Typography>    
+                    <AlphaPipelineStepper />
                 </CardContent>
                 <CardActions>
                     <IconButton
@@ -106,9 +106,12 @@ export default function  ScriptBaseAlfa() {
                         fontSize="large"
                     />
                     </IconButton>
-                        <Typography paragraph variant="body1" color="error">
-                            Expand to see the script used to anonymize your data and extract the relevant data from your data package.
-                        </Typography>
+                    <Typography gutterBottom variant="body1" color="error">
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
+                        Google semantic Location History data for January in 2019, 2020, and 2021.<br />
+                        <br />
+                        Expand to see the script used to anonymize your data and extract the relevant data from your data package.
+                    </Typography>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <Typography gutterBottom variant="body2" color="error">
@@ -124,8 +127,9 @@ export default function  ScriptBaseAlfa() {
                             YEARS = [2019, 2020, 2021]<br />
                             MONTHS = ["JANUARY"]<br />
                             NPLACES = 3<br />
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
-                            your Google semantic Location History data for January in 2019, 2020, and 2021."
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 <br />
+                            pandemic. We examined your Google semantic Location History data for January in <br />
+                            2019, 2020, and 2021."
                             <br />
                             <br />
 

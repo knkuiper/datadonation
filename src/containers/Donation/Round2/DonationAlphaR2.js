@@ -1,11 +1,11 @@
-/// Donation page for version Alfa - baseline version with only the script
-/// For round 1 of experiment, links to qualtrics survey Alfa round 1
+/// Donation page for version Alpha - baseline version with only the script
+/// For round 2 of experiment, links to qualtrics surve Alpha round 2
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptBaseAlfa from '../../Script/ScriptBaseAlfa';
-import DataFeedbackBaseAlfa from '../../Feedback/DataFeedbackBaseAlfa';
+import ScriptAlpha from '../../Script/ScriptAlpha';
+import DataFeedbackAlpha from '../../Feedback/DataFeedbackAlpha';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -47,30 +47,30 @@ function getSteps() {
 }
 
 function getStepContent(step) {
-  switch (step) {
-    case 0:
-        return `If you have not already requested your data from Google, go to Google Takeout and follow the instructions 
-        to request your location data.`;
-    case 1:
-        return `Once you have saved your data package from Google to your device, select the data file (in ZIP format) 
-        to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
-    case 2:
-        return `By processing the data, the relevant data for this research will be extracted from your data package. 
-        The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
-        the next step for your consent.`;
-    case 3:
-        return `By clicking consent, you consent to donate the extracted data to the research study. Below is a data 
-        report of the data extracted from your Google data package. This is the data that will be donated to the research 
-        study. The rest of the data is not stored or sent to the research study.`;
-    case 4:
-        return `The data donation procedure is completed. Please click to go the next part of the research and fill out 
-        the survey.`;
-    default:
-      return 'Unknown step';
-  }
+    switch (step) {
+        case 0:
+            return `If you have not already requested your data from Google, go to Google Takeout and follow the instructions 
+            to request your location data.`;
+        case 1:
+            return `Once you have saved your data package from Google to your device, select the data file (in ZIP format) 
+            to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
+        case 2:
+            return `By processing the data, the relevant data for this research will be extracted from your data package. 
+            The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
+            the next step for your consent.`;
+        case 3:
+            return `By clicking consent, you consent to donate the extracted data to the research study. Below is a data 
+            report of the data extracted from your Google data package. This is the data that will be donated to the research 
+            study. The rest of the data is not stored or sent to the research study.`;
+        case 4:
+            return `The data donation procedure is completed. Please click to go the next part of the research and fill out 
+            the survey.`;
+        default:
+            return 'Unknown step';
+    }
 }
 
-export default function DonationAlfaR1() {
+export default function DonationAlphaR2() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState(new Set());
@@ -234,18 +234,18 @@ export default function DonationAlfaR1() {
                                     </Button>
                                 )}
                                 {activeStep === 4 && (
-                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_3JlIlDkCHcQrcy2" className={classes.button}>
-                                    {/* Final version survey Alfa round 1 */}
-                                    Go to survey
+                                    <Button variant="contained" color="secondary" href="https://survey.uu.nl/jfe/form/SV_7VE6aKVqZqJCgxU" className={classes.button}>
+                                    {/* Final version survey Alpha round 2 */}
+                                        Go to survey
                                     </Button>
                                 )}
                                 </Grid>
                                 <Grid className={classes.scriptContainer} >
                                 {activeStep === 2 && (
-                                    <ScriptBaseAlfa />
+                                    <ScriptAlpha />
                                 )}
                                 {activeStep === 3 && (
-                                    <DataFeedbackBaseAlfa />
+                                    <DataFeedbackAlpha />
                                 )}
                                 </Grid>
                             </div>
@@ -257,7 +257,7 @@ export default function DonationAlfaR1() {
             </Paper>
             </Grid>
             
-            <Grid item xs={8} sm={8} md={2} lg={2} className={classes.infoContainer}>
+<Grid item xs={8} sm={8} md={2} lg={2} className={classes.infoContainer}>
                 <Typography gutterBottom variant="h6">
                 <b>About data donation</b>
                 </Typography>

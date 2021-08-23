@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
+//import CardMedia from '@material-ui/core';
 import clsx from 'clsx';
-import LowGammaGraphic from '../../assets/img/Concrete_gamma_graphic.png';
+//import GammaGraphic from '../../assets/img/GammaConcrete_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
+import GammaPipelineStepper from '../DataPipeline/GammaPipelineStepper';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,14 +18,15 @@ const useStyles = makeStyles((theme) => ({
     card: {
         marginTop: 20,
         padding: 15,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'right',
         backgroundColor: theme.palette.paper.dark,
     },
     media: {
         width: "100%",
     },
     expand: {
-        //marginLeft: 'auto',
-        marginTop: -15,
         transform: 'rotate(0deg)',
         transition: theme.transitions.create('transform', {
             duration: theme.transitions.duration.shortest,
@@ -58,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ScriptLowGamma() {
+export default function ScriptGamma() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -75,37 +78,32 @@ export default function ScriptLowGamma() {
         <Grid item>
             <Card className={classes.card}>
                 {/* Explanation in low/concrete level - how */}
-                <CardHeader
-                    title={<Typography paragraph variant="h5" color="error">
-                        How your data is extracted and anonymized
+                <CardHeader title={
+                    <Typography paragraph variant="h5" color="error">
+                        How your data is processed and prepared for data donation
                     </Typography>}
                 />
-                <CardMedia
+                {/*<CardMedia
                     className={classes.media}
                     component="img"
-                    image={LowGammaGraphic}
+                    image={GammaGraphic}
                     title="pipeline-explanation"
-                />
-                
-                {/*
-                <Typography paragraph variant="body1" color="error">
-                We only extract relevant location data from the Google data package by looking at the places visited and 
-                activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
-                replacing the address name with number placeholders such as “Place 1” etc.
-                </Typography>
-
-                <Typography paragraph variant="body1" color="error">
-                The total number of visited places are extracted, and for the three most visited places the days spent per place are 
-                extracted. The days spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. 
-                The extracted data is written out as a new dataset ready to be donated to the research study.
-                </Typography>
-                */}
-
+                />*/}
                 <CardContent>
+                    <GammaPipelineStepper />
+                    {/*
                     <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
-                        semantic Location History data for January in 2019, 2020, and 2021.
+                    We only extract relevant location data from the Google data package by looking at the places visited and 
+                    activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
+                    replacing the address name with number placeholders such as “Place 1” etc.
                     </Typography>
+
+                    <Typography paragraph variant="body1" color="error">
+                    The total number of visited places are extracted, and for the three most visited places the days spent per place are 
+                    extracted. The days spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. 
+                    The extracted data is written out as a new dataset ready to be donated to the research study.
+                    </Typography>
+                    */}
                 </CardContent>
                 <CardActions>
                     <IconButton
@@ -122,6 +120,9 @@ export default function ScriptLowGamma() {
                     />
                     </IconButton>
                     <Typography paragraph variant="body1" color="error">
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
+                        semantic Location History data for January in 2019, 2020, and 2021.<br />
+                        <br />
                         Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                 </CardActions>
@@ -139,8 +140,9 @@ export default function ScriptLowGamma() {
                             YEARS = [2019, 2020, 2021]<br/>
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
-                            your Google semantic Location History data for January in 2019, 2020, and 2021."
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 <br />
+                            pandemic. We examined your Google semantic Location History data for January in <br />
+                            2019, 2020, and 2021."
                             <br/>
                             <br/>
                             

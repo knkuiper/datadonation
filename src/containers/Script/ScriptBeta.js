@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
+//import CardMedia from '@material-ui/core';
 import clsx from 'clsx';
-import HighBetaGraphic from '../../assets/img/Abstract_beta_graphic.png';
+//import BetaGraphic from '../../assets/img/BetaAbstract_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
+import BetaPipelineStepper from '../DataPipeline/BetaPipelineStepper';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,15 +17,16 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         marginTop: 20,
-        padding: 15,
+        padding: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'right',
         backgroundColor: theme.palette.paper.dark,
     },
     media: {
         width: "100%",
     },
     expand: {
-        //marginLeft: 'auto',
-        marginTop: -15,
         transform: 'rotate(0deg)',
         transition: theme.transitions.create('transform', {
             duration: theme.transitions.duration.shortest,
@@ -58,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ScriptHighBeta() {
+export default function ScriptBeta() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -75,36 +78,32 @@ export default function ScriptHighBeta() {
         <Grid item>
             <Card className={classes.card}>
                 {/* Explanation in high/abstract level - why */}
-                    <CardHeader
-                        title={<Typography paragraph variant="h5" color="error">
-                            How your data is extracted and anonymized
-                        </Typography>}
+                <CardHeader title={
+                    <Typography paragraph variant="h5" color="error">
+                        How your data is processed and prepared for data donation
+                    </Typography>}
                 />
-                <CardMedia
+                {/*<CardMedia
                     className={classes.media}
                     component="img"
-                    image={HighBetaGraphic}
+                    image={BetaGraphic}
                     title="pipeline-explanation"
-                />
+                />*/}
                 <CardContent>
-                <Typography paragraph variant="body1" color="error">
-                    This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
-                    Location History data for January in 2019, 2020, and 2021.
-                </Typography>
+                    <BetaPipelineStepper />
+                    {/*
+                    <Typography paragraph variant="body1" color="error">
+                    We only extract the location data from the Google data package, as this is the data the needed for the researchers 
+                    to investigate the research questions. The identifying information is anonymized, so that no personal data is 
+                    included in the data you donate to the research study.
+                    </Typography>
 
-                {/*
-                <Typography paragraph variant="body1" color="error">
-                We only extract the location data from the Google data package, as this is the data the needed for the researchers 
-                to investigate the research questions. The identifying information is anonymized, so that no personal data is 
-                included in the data you donate to the research study.
-                </Typography>
-
-                <Typography paragraph variant="body1" color="error">
-                The total number of visited places, and the time spent per place are extracted for the three most visited places.
-                The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
-                extracted data is written out as a new dataset ready to be donated to the research study.
-                </Typography>
-                */}
+                    <Typography paragraph variant="body1" color="error">
+                    The total number of visited places, and the time spent per place are extracted for the three most visited places.
+                    The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
+                    extracted data is written out as a new dataset ready to be donated to the research study.
+                    </Typography>
+                    */}
                 </CardContent>
                 <CardActions>
                     <IconButton
@@ -121,6 +120,9 @@ export default function ScriptHighBeta() {
                     />
                     </IconButton>
                     <Typography paragraph variant="body1" color="error">
+                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                        Location History data for January in 2019, 2020, and 2021.<br />
+                                <br />
                         Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                 </CardActions>
@@ -138,8 +140,9 @@ export default function ScriptHighBeta() {
                             YEARS = [2019, 2020, 2021]<br/>
                             MONTHS = ["JANUARY"]<br/>
                             NPLACES = 3<br/>
-                            TEXT = "This study examines the change in travel behaviour during the COVID-19 pandemic. We examined
-                            your Google semantic Location History data for January in 2019, 2020, and 2021."
+                            TEXT = "This study examines the change in travel behaviour during the COVID-19 <br />
+                            pandemic. We examined your Google semantic Location History data for January in <br />
+                            2019, 2020, and 2021."
                             <br/>
                             <br/>
                             

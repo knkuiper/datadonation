@@ -4,8 +4,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptLowGamma from '../../Script/ScriptLowGamma';
-import DataFeedbackLowGamma from '../../Feedback/DataFeedbackLowGamma';
+import ScriptGamma from '../../Script/ScriptGamma';
+import DataFeedbackGamma from '../../Feedback/DataFeedbackGamma';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -242,10 +242,10 @@ export default function DonationGammaR2() {
                                     </Grid>
                                     <Grid className={classes.scriptContainer} >
                                         {activeStep === 2 && (
-                                            <ScriptLowGamma />
+                                            <ScriptGamma />
                                         )}
                                         {activeStep === 3 && (
-                                            <DataFeedbackLowGamma />
+                                            <DataFeedbackGamma />
                                         )}
                                     </Grid>
                                 </div>

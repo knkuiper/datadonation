@@ -5,9 +5,9 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
 import DashboardHome from '../Dashboard/DashboardHome';
 // Round 1 
-  // versions
-  import DashboardAlfaR1 from '../Dashboard/Round1/DashboardAlfaR1';
-  import DonationAlfaR1 from '../Donation/Round1/DonationAlfaR1';
+  // Alpha versions
+  import DashboardAlphaR1 from '../Dashboard/Round1/DashboardAlphaR1';
+  import DonationAlphaR1 from '../Donation/Round1/DonationAlphaR1';
   // Beta versions
   import DashboardBetaR1 from '../Dashboard/Round1/DashboardBetaR1';
   import DonationBetaR1 from '../Donation/Round1/DonationBetaR1';
@@ -16,9 +16,9 @@ import DashboardHome from '../Dashboard/DashboardHome';
   import DonationGammaR1 from '../Donation/Round1/DonationGammaR1';
 
 // Round 2 
-  // Alfa versions
-  import DashboardAlfaR2 from '../Dashboard/Round2/DashboardAlfaR2';
-  import DonationAlfaR2 from '../Donation/Round2/DonationAlfaR2';
+  // Alpha versions
+  import DashboardAlphaR2 from '../Dashboard/Round2/DashboardAlphaR2';
+  import DonationAlphaR2 from '../Donation/Round2/DonationAlphaR2';
   // Beta versions
   import DashboardBetaR2 from '../Dashboard/Round2/DashboardBetaR2';
   import DonationBetaR2 from '../Donation/Round2/DonationBetaR2';
@@ -27,15 +27,18 @@ import DashboardHome from '../Dashboard/DashboardHome';
   import DonationGammaR2 from '../Donation/Round2/DonationGammaR2';
 
 // Round 3
-  // Alfa versions
-  import DashboardAlfaR3 from '../Dashboard/Round3/DashboardAlfaR3';
-  import DonationAlfaR3 from '../Donation/Round3/DonationAlfaR3';
+  // Alpha versions
+  import DashboardAlphaR3 from '../Dashboard/Round3/DashboardAlphaR3';
+  import DonationAlphaR3 from '../Donation/Round3/DonationAlphaR3';
   // Beta versions
   import DashboardBetaR3 from '../Dashboard/Round3/DashboardBetaR3';
   import DonationBetaR3 from '../Donation/Round3/DonationBetaR3';
   // Gamma versions
   import DashboardGammaR3 from '../Dashboard/Round3/DashboardGammaR3';
   import DonationGammaR3 from '../Donation/Round3/DonationGammaR3';
+
+//test
+import testSite from '../DataPipeline/testSite';
 
 import './App.css';
 
@@ -98,8 +101,8 @@ class App extends Component {
 
               <Route path="/home" component={ DashboardHome } />   {/* Dashboard home page */}
               
-              <Route path="/dashboardA1" component={ DashboardAlfaR1 } />  {/* Dashboard Alfa, Round 1 */}
-              <Route path="/donationA1" component={ DonationAlfaR1 } />    {/* Donation Alfa, Round 1 */}
+              <Route path="/dashboardA1" component={ DashboardAlphaR1 } />  {/* Dashboard Alpha, Round 1 */}
+              <Route path="/donationA1" component={ DonationAlphaR1 } />    {/* Donation Alpha, Round 1 */}
 
               <Route path="/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
               <Route path="/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
@@ -107,8 +110,8 @@ class App extends Component {
               <Route path="/dashboardC1" component={ DashboardGammaR1 } />  {/* Dashboard Gamma, Round 1 */}
               <Route path="/donationC1" component={ DonationGammaR1 } />    {/* Donation Gamma, Round 1 */}
 
-              <Route path="/dashboardA2" component={ DashboardAlfaR2 }/>    {/* Dashboard Alfa, Round 2 */}
-              <Route path="/donationA2" component={ DonationAlfaR2 } />     {/* Donation Alfa, Round 2 */}
+              <Route path="/dashboardA2" component={ DashboardAlphaR2 }/>    {/* Dashboard Alpha, Round 2 */}
+              <Route path="/donationA2" component={ DonationAlphaR2 } />     {/* Donation Alpha, Round 2 */}
 
               <Route path="/dashboardB2" component={ DashboardBetaR2 } />   {/* Dashboard Beta, Round 2 */}
               <Route path="/donationB2" component={ DonationBetaR2 } />     {/* Donation Beta, Round 2 */}
@@ -116,8 +119,8 @@ class App extends Component {
               <Route path="/dashboardC2" component={ DashboardGammaR2 } />  {/* Dashboard Gamma, Round 2 */}
               <Route path="/donationC2" component={ DonationGammaR2 } />    {/* Donation Gamma, Round 2 */}
 
-              <Route path="/dashboardA3" component={ DashboardAlfaR3 } />   {/* Dashboard Alfa, Round 3 */}
-              <Route path="/donationA3" component={ DonationAlfaR3 } />     {/* Donation Alfa, Round 3 */}
+              <Route path="/dashboardA3" component={ DashboardAlphaR3 } />   {/* Dashboard Alpha, Round 3 */}
+              <Route path="/donationA3" component={ DonationAlphaR3 } />     {/* Donation Alpha, Round 3 */}
 
               <Route path="/dashboardB3" component={ DashboardBetaR3 } />    {/* Dashboard Beta, Round 3 */}
               <Route path="/donationB3" component={ DonationBetaR3 } />      {/* Donation Beta, Round 3 */}
@@ -125,8 +128,10 @@ class App extends Component {
               <Route path="/dashboardC3" component={ DashboardGammaR3 } />   {/* Dashboard Gamma, Round 3 */}
               <Route path="/donationC3" component={ DonationGammaR3 } />     {/* Donation Gamma, Round 3 */}
 
+              <Route path="/testing" component={ testSite } />
+
               <Route path='/' >
-                <Redirect to="/home" />
+                <Redirect to="/home" /> 
               </Route>
             
             </Switch> 

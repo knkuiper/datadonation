@@ -34,7 +34,7 @@ const rows = [
     createData('2021', 'January', 18, 29.449, 1.55, 340.939, 22.618, 1.178, 0.707),
 ];
 
-export default function DataFeedbackLowGamma() {
+export default function DataFeedbackGamma() {
     const classes = useStyles();
 
     return (

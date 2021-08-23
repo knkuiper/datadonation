@@ -1,5 +1,5 @@
-/// Dashboard page for version Alfa - baseline version with only the script
-/// For round 1 of experiment, links to donation page Alfa round 1
+/// Dashboard page for version Alpha - baseline version with only the script
+/// For round 1 of experiment, links to donation page Alpha round 1
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';

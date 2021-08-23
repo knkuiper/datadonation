@@ -4,8 +4,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
-import ScriptHighBeta from '../../Script/ScriptHighBeta';
-import DataFeedbackHighBeta from '../../Feedback/DataFeedbackHighBeta';
+import ScriptBeta from '../../Script/ScriptBeta';
+import DataFeedbackBeta from '../../Feedback/DataFeedbackBeta';
 import UUlogo from '../../../assets/img/UU_logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -242,10 +242,10 @@ export default function DonationBetaR3() {
                                     </Grid>
                                     <Grid className={classes.scriptContainer} >
                                         {activeStep === 2 && (
-                                            <ScriptHighBeta />
+                                            <ScriptBeta />
                                         )}
                                         {activeStep === 3 && (
-                                            <DataFeedbackHighBeta />
+                                            <DataFeedbackBeta />
                                         )}
                                     </Grid>
                                 </div>
