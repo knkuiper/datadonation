@@ -13,19 +13,20 @@ import listICon from '../../assets/img/format_list_bulleted.png';
 const tutorialSteps = [
   {
     label:    `Input: your Google data package`,
-    content:  `We only select the relevant location data that is needed for the researchers to answer the research 
-              questions.`,
+    content:  `From the Google data package, we only select the relevant location data needed for the researchers to 
+              investigate the changes in movement during COVID lockdowns.`,
     imgPath:  folderIcon,
   },
   {
     label:    `Run: anonymization script`,
-    content:  `Your data is anonymized to remove any identifiable information from the data, to make sure no personal 
-              data is in the data file you donate to the research study.`,
+    content:  `To protect your privacy your data is anonymized. Any identifiable information is removed from the data 
+              so that the data file you donate to the research study is completely anonymized.`,
     imgPath:  codeIcon,
   },
   {
     label:    `Output: data donation file`,
-    content:  `The extracted and anonymized data is saved as a new data file ready to be donated to the research study.`,
+    content:  `The extracted location data is returned as a new anonymized data file ready to be donated to the research 
+              study.`,
     imgPath:  listICon,
   }
 ];
@@ -47,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     height: 75,
     maxWidth: 450,
+    marginTop: 10,
     display: 'flex',
     alignItems: 'center',
     backgroundColor: theme.palette.paper.dark,

@@ -16,38 +16,41 @@ import homeworkIcon from '../../assets/img/home_work.png';
 const tutorialSteps = [
   {
     label:    `Input: your Google data package`,
-    content:  `From the Google location data we only select the relevant location data for the research study.`,
+    content:  `The location history data from Google consists of data files with lists of saved geo-locations and saved 
+              activities at these locations. From the Google Takeout ZIP file you uploaded, we extract the relevant 
+              location data for this research study.`,
     imgPath:  folderIcon,
   },
   {
     label:    `The Google data package`,
-    content:  `We look at the places you visited and your activities from January 2019, 2020, and 2021.`,
+    content:  `We extract the relevant location data and calculate the top three places you visited, the duration of these 
+              visits, and your activities and duration of these activities from January 2019, 2020, and 2021.`,
     imgPath:  homeworkIcon,
   },
   {
     label:    `Run: anonymization script`,
-    content:  `Your data is anonymized by running a script that removes any identifying information such as 
-              addresses, streetnames or GPS coordinates from the data.`,
+    content:  `Your data is anonymized by running a script that removes any personal and identifying information such 
+              as addresses, street names or GPS coordinates from the data.`,
     imgPath:  codeIcon,
   },
   {
     label:    'The anonymization script',
     content:  `To anonymize the data, any information that can be used to identify you is replaced with placeholders. 
-              For example would “Heidelberglaan 8” in the Google data file be replaced with “Place 1” in the new, 
-              anonymized data file.`,
+              For example, if one of the saved addresses in the Google data package is “Heidelberglaan 8”, this will 
+              be replaced with “Place 1” in the new, anonymized data file.`,
     imgPath:  houseIcon,
   },
   {
     label:    `Output: data donation file`,
-    content:  `The extracted and anonymized data is saved as a new data file ready to be donated to the research 
-              study.`,
+    content:  `The extracted data from your Google data package is returned as a new and anonymized data file ready to be 
+              donated to the research study.`,
     imgPath:  listICon,
   },
   {
     label:    'The data donation file',
     content:  `The total number of visited places are extracted from the Google data and saved in the data donation file. 
-              The three most visited places are calculated and the days spent per place. The time spent in the different 
-              places and in activity, as well as the travelled distance in kilometers is also extracted.`,
+              The three most visited places are calculated, and the days spent per place. The time spent in the different 
+              places and in activity, as well as the travelled distance in kilometres is also extracted.`,
     imgPath:  assessmentIcon,
   },
 ];
@@ -69,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     height: 150,
     maxWidth: 450,
+    marginTop: 10,
     display: 'flex',
     alignItems: 'center',
     backgroundColor: theme.palette.paper.dark,

@@ -12,17 +12,14 @@ import listICon from '../../assets/img/format_list_bulleted.png';
 
 const tutorialSteps = [
   {
-    //label:  'Input the Google data package',  first draft
     label:    `Input: your Google data package`,
     imgPath:  folderIcon,
   },
   {
-    //label:  'Run the anonymization script', first draft
     label:    `Run: anonymization script`,
     imgPath:  codeIcon,
   },
   {
-    //label:  'Output the anonymized data', first draft
     label:    `Output: data donation file`,
     imgPath:  listICon,
   },
