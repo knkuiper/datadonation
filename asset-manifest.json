@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Data-donation-web-app/static/css/main.62a8bc85.chunk.css",
-    "main.js": "/Data-donation-web-app/static/js/main.058ff5c8.chunk.js",
-    "main.js.map": "/Data-donation-web-app/static/js/main.058ff5c8.chunk.js.map",
-    "runtime-main.js": "/Data-donation-web-app/static/js/runtime-main.c4f281fe.js",
-    "runtime-main.js.map": "/Data-donation-web-app/static/js/runtime-main.c4f281fe.js.map",
-    "static/js/2.af5bd6cb.chunk.js": "/Data-donation-web-app/static/js/2.af5bd6cb.chunk.js",
-    "static/js/2.af5bd6cb.chunk.js.map": "/Data-donation-web-app/static/js/2.af5bd6cb.chunk.js.map",
-    "static/js/3.3ea36e3e.chunk.js": "/Data-donation-web-app/static/js/3.3ea36e3e.chunk.js",
-    "static/js/3.3ea36e3e.chunk.js.map": "/Data-donation-web-app/static/js/3.3ea36e3e.chunk.js.map",
+    "main.js": "/Data-donation-web-app/static/js/main.06f3cfff.chunk.js",
+    "main.js.map": "/Data-donation-web-app/static/js/main.06f3cfff.chunk.js.map",
+    "runtime-main.js": "/Data-donation-web-app/static/js/runtime-main.e0e9871c.js",
+    "runtime-main.js.map": "/Data-donation-web-app/static/js/runtime-main.e0e9871c.js.map",
+    "static/js/2.cbd663bc.chunk.js": "/Data-donation-web-app/static/js/2.cbd663bc.chunk.js",
+    "static/js/2.cbd663bc.chunk.js.map": "/Data-donation-web-app/static/js/2.cbd663bc.chunk.js.map",
+    "static/js/3.c43205e4.chunk.js": "/Data-donation-web-app/static/js/3.c43205e4.chunk.js",
+    "static/js/3.c43205e4.chunk.js.map": "/Data-donation-web-app/static/js/3.c43205e4.chunk.js.map",
     "index.html": "/Data-donation-web-app/index.html",
     "static/css/main.62a8bc85.chunk.css.map": "/Data-donation-web-app/static/css/main.62a8bc85.chunk.css.map",
-    "static/js/2.af5bd6cb.chunk.js.LICENSE.txt": "/Data-donation-web-app/static/js/2.af5bd6cb.chunk.js.LICENSE.txt",
-    "static/media/UU_logo.0d85e760.png": "/Data-donation-web-app/static/media/UU_logo.0d85e760.png",
-    "static/media/code.28068a88.png": "/Data-donation-web-app/static/media/code.28068a88.png",
-    "static/media/folder_shared.66f1fd7b.png": "/Data-donation-web-app/static/media/folder_shared.66f1fd7b.png",
-    "static/media/house.3847d4ad.png": "/Data-donation-web-app/static/media/house.3847d4ad.png"
+    "static/js/2.cbd663bc.chunk.js.LICENSE.txt": "/Data-donation-web-app/static/js/2.cbd663bc.chunk.js.LICENSE.txt",
+    "static/media/InfographicAlpha.2b69ac6d.mp4": "/Data-donation-web-app/static/media/InfographicAlpha.2b69ac6d.mp4",
+    "static/media/InfographicBeta.42da89c9.mp4": "/Data-donation-web-app/static/media/InfographicBeta.42da89c9.mp4",
+    "static/media/InfographicGamma.1d27051a.mp4": "/Data-donation-web-app/static/media/InfographicGamma.1d27051a.mp4",
+    "static/media/UU_logo.0d85e760.png": "/Data-donation-web-app/static/media/UU_logo.0d85e760.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4f281fe.js",
-    "static/js/2.af5bd6cb.chunk.js",
+    "static/js/runtime-main.e0e9871c.js",
+    "static/js/2.cbd663bc.chunk.js",
     "static/css/main.62a8bc85.chunk.css",
-    "static/js/main.058ff5c8.chunk.js"
+    "static/js/main.06f3cfff.chunk.js"
   ]
 }
