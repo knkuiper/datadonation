@@ -39,7 +39,7 @@ export default function DashboardHome() {
         <>
         <Grid container
             direction="row"
-            justifyContent="flex-start"
+            justifycontent="flex-start"
             className={classes.root}
         >
             <Grid item xs={12} className={classes.title}>

@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
-//import CardMedia from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography, CardMedia } from '@material-ui/core';
 import clsx from 'clsx';
-//import GammaGraphic from '../../assets/img/GammaConcrete_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
-import GammaPipelineStepper from '../DataPipeline/GammaPipelineStepper';
+import InfographicGammaVideo from '../../assets/video/InfographicGamma.mp4';
+// alternative explanations forms not in use
+//import GammaGraphicImage from '../../assets/img/GammaConcrete_graphic.png';
+//import PipelineStepperGamma from '../DataPipeline/PipelineStepperGamma';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,7 +74,7 @@ export default function ScriptGamma() {
         <>
         <Grid container className={classes.root}
             direction="row"
-            justifyContent="flex-start"
+            justifycontent="flex-start"
         >
         <Grid item>
             <Card className={classes.card}>
@@ -83,28 +84,48 @@ export default function ScriptGamma() {
                         How your data is processed and prepared for data donation
                     </Typography>}
                 />
-                {/*<CardMedia
+                <CardMedia
+                    className={classes.media}
+                    component="video"
+                    src={InfographicGammaVideo}
+                    title="gamma-video-explanation"
+                    autoPlay
+                    controls
+                />
+                {/* Alt version to show explanation as a image
+                <CardMedia 
                     className={classes.media}
                     component="img"
-                    image={GammaGraphic}
-                    title="pipeline-explanation"
-                />*/}
-                <CardContent>
-                    <GammaPipelineStepper />
-                    {/*
+                    image={GammaGraphicImage}
+                    title="gamma-img-explanation"
+                />
+                */}
+                {/*<CardContent>
                     <Typography paragraph variant="body1" color="error">
-                    We only extract relevant location data from the Google data package by looking at the places visited and 
-                    activities from January 2019, 2020, and 2021. Any direct identifying address information are anonymized by 
-                    replacing the address name with number placeholders such as “Place 1” etc.
-                    </Typography>
+                        1.	Input: your Google data package<br />
+                        The location history data from Google consists of data files with lists of saved geo-locations and activities at these locations. From the Google Takeout ZIP file you uploaded, we extract the relevant location data for this research study.<br />
+                        <br />
+                        2.	The Google data package <br />
+                        We extract the relevant location data and calculate the top three places you visited, the duration of these visits, and your activities and duration of these activities from January 2019, 2020, and 2021.<br />
+                        <br />
+                        3.	Run: anonymization script <br />
+                        Your data is anonymized by running a script that removes any personal and identifying information such as addresses, street names or GPS coordinates from the data.<br />
+                        <br />
+                        4.	The anonymization script <br />
+                        To anonymize the data, any information that can be used to identify you is replaced with placeholders. For example, if one of the saved addresses in the Google data package is “Heidelberglaan 8”, this will be replaced with “Place 1” in the new, anonymized data file.<br />
+                        <br />
+                        5.	Output: data donation file <br />
+                        The extracted data from your Google data package is returned as a new and anonymized data file ready to be donated to the research study.<br />
+                        <br />
+                        6.	The data donation file <br />
+                        The total number of visited places are extracted from the Google data and saved in the data donation file. The three most visited places are calculated, and the days spent per place. The time spent in the different places and in activity, as well as the travelled distance in kilometres is also extracted.
 
-                    <Typography paragraph variant="body1" color="error">
-                    The total number of visited places are extracted, and for the three most visited places the days spent per place are 
-                    extracted. The days spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. 
-                    The extracted data is written out as a new dataset ready to be donated to the research study.
+                    
                     </Typography>
-                    */}
-                </CardContent>
+                    {/* Alt version to show explanation as a stepper
+                    <PipelineStepperGamma /> 
+                </CardContent> */}
+                
                 <CardActions>
                     <IconButton
                         className={clsx(classes.expand, {
@@ -116,13 +137,13 @@ export default function ScriptGamma() {
                     >
                     <ExpandMoreIcon
                         color="error"
-                        fontSize="large"
+                        fontSize="medium"
                     />
                     </IconButton>
-                    <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
+                        <Typography paragraph variant="body2" color="error">
+                        {/*This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google
                         semantic Location History data for January in 2019, 2020, and 2021.<br />
-                        <br />
+                        <br />*/}
                         Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                 </CardActions>

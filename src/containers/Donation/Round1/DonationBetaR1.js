@@ -186,7 +186,7 @@ export default function DonationBetaR1() {
                                 </Typography>
                             </StepButton>
                     <StepContent>
-                        <Typography gutterBottom variant="body1" color="text">{getStepContent(index)}</Typography>
+                        <Typography gutterBottom variant="body1" color="inherit">{getStepContent(index)}</Typography>
                                 <div className={classes.actionsContainer}>
                                     <Grid
                                         container

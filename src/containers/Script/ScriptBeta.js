@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
-//import CardMedia from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography, CardMedia } from '@material-ui/core';
 import clsx from 'clsx';
-//import BetaGraphic from '../../assets/img/BetaAbstract_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
-import BetaPipelineStepper from '../DataPipeline/BetaPipelineStepper';
+import InfographicBetaVideo from '../../assets/video/InfographicBeta.mp4';
+// alternative explanations forms not in use
+//import BetaGraphicImage from '../../assets/img/BetaAbstract_graphic.png';
+//import PipelineStepperBeta from '../DataPipeline/PipelineStepperBeta';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,7 +74,7 @@ export default function ScriptBeta() {
         <>
         <Grid container className={classes.root}
             direction="row"
-            justifyContent="flex-start"
+            justifycontent="flex-start"
         >
         <Grid item>
             <Card className={classes.card}>
@@ -83,28 +84,37 @@ export default function ScriptBeta() {
                         How your data is processed and prepared for data donation
                     </Typography>}
                 />
-                {/*<CardMedia
+                <CardMedia
+                    className={classes.media}
+                    component="video"
+                    image={InfographicBetaVideo}
+                    title="beta-video-explanation"
+                    autoPlay
+                    controls
+                />
+                {/* Alt version to show explanation as a image
+                <CardMedia
                     className={classes.media}
                     component="img"
-                    image={BetaGraphic}
-                    title="pipeline-explanation"
-                />*/}
-                <CardContent>
-                    <BetaPipelineStepper />
-                    {/*
+                    image={BetaGraphicImage}
+                    title="beta-img-explanation"
+                />
+                */}
+                {/* <CardContent>    
                     <Typography paragraph variant="body1" color="error">
-                    We only extract the location data from the Google data package, as this is the data the needed for the researchers 
-                    to investigate the research questions. The identifying information is anonymized, so that no personal data is 
-                    included in the data you donate to the research study.
+                        1.	Input: your Google data package <br />
+                        From the Google data package, we only select the relevant location data needed for the researchers to investigate the changes in movement during COVID-19 lockdowns. <br />
+                        <br />
+                        2.	Run: anonymization script <br />
+                        To protect your privacy your data is anonymized. Any identifiable information is removed from the data so that the data file you donate to the research study is completely anonymized. <br />
+                        <br />
+                        3. Output: data donation file <br />
+                        The extracted location data is returned as a new anonymized data file ready to be donated to the research study.
                     </Typography>
-
-                    <Typography paragraph variant="body1" color="error">
-                    The total number of visited places, and the time spent per place are extracted for the three most visited places.
-                    The time spent in places and in activity, as well as the travelled distance in kilometres, are also extracted. The
-                    extracted data is written out as a new dataset ready to be donated to the research study.
-                    </Typography>
-                    */}
-                </CardContent>
+                    {/* Alt version to show explanation as a stepper
+                    <PipelineStepperBeta />
+                </CardContent> */}
+                 
                 <CardActions>
                     <IconButton
                         className={clsx(classes.expand, {
@@ -116,13 +126,13 @@ export default function ScriptBeta() {
                     >
                     <ExpandMoreIcon
                         color="error"
-                        fontSize="large"
+                        fontSize="medium"
                     />
                     </IconButton>
-                    <Typography paragraph variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
+                    <Typography paragraph variant="body2" color="error">
+                        {/*This study examines the change in travel behaviour during the COVID-19 pandemic by examining your Google semantic
                         Location History data for January in 2019, 2020, and 2021.<br />
-                                <br />
+                        <br />*/}
                         Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                 </CardActions>

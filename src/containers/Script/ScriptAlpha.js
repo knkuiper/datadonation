@@ -2,14 +2,15 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardContent, CardActions, Typography } from '@material-ui/core';
-//import CardMedia from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, CardActions, Typography, CardMedia } from '@material-ui/core';
 import clsx from 'clsx';
-//import AlphaBaseGraphic from '../../assets/img/AlphaBaseline_graphic.png';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
-import AlphaPipelineStepper from '../DataPipeline/AlphaPipelineStepper';
+import AlphaInfographicVideo from '../../assets/video/InfographicAlpha.mp4';
+// alternative explanations forms not in use
+//import AlphaGraphicImage from '../../assets/img/AlphaBaseline_graphic.png';
+//import PipelineStepperAlpha from '../DataPipeline/PipelineStepperAlpha';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -73,25 +74,42 @@ export default function  ScriptAlpha() {
         <>
         <Grid container className={classes.root}
             direction="row"
-            justifyContent="flex-start"
+            justifycontent="flex-start"
         >
         <Grid item>
             <Card className={classes.card}>
-                    {/* Explanation in baseline */}
+                {/* Explanation in baseline */}
                 <CardHeader title={
                     <Typography paragraph variant="h5" color="error">
                         How your data is processed and prepared for data donation
                     </Typography>}
                 />
-                {/*<CardMedia
+                <CardMedia
                         className={classes.media}
-                        component="img"
-                        image={AlphaBaseGraphic}
-                        title="pipeline-explanation"
-                />*/}
-                <CardContent>
-                    <AlphaPipelineStepper />
-                </CardContent>
+                        component="video"
+                        src={AlphaInfographicVideo}
+                        title="alpha-video-explanation"
+                        autoPlay
+                        controls
+                />
+                {/* Alt version to show explanation as a image
+                <CardMedia
+                className={classes.media}
+                component="img"
+                src={AlphaGraphicImage}
+                title="alpha-img-explanation"
+                /> 
+                */}
+                
+                {/*  <CardContent>
+                    <Typography paragraph variant="body1" color="error">
+                        1.	Input: your Google data package <br />
+                        2.	Run: anonymization script <br />
+                        3.	Output: data donation file <br />
+                    </Typography>
+                    {/* Alt version to show explanation as a stepper
+                    <PipelineStepperAlpha />
+                </CardContent> */}
                 <CardActions>
                     <IconButton
                         className={clsx(classes.expand, {
@@ -106,10 +124,11 @@ export default function  ScriptAlpha() {
                         fontSize="large"
                     />
                     </IconButton>
-                    <Typography gutterBottom variant="body1" color="error">
-                        This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
+                        <Typography gutterBottom variant="body2" color="error">
+                        {/*  This study examines the change in travel behaviour during the COVID-19 pandemic by examining your
                         Google semantic Location History data for January in 2019, 2020, and 2021.<br />
                         <br />
+                        */}
                         Expand to see the script used to anonymize your data and extract the relevant data from your data package.
                     </Typography>
                 </CardActions>

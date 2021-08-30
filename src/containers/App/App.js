@@ -37,9 +37,6 @@ import DashboardHome from '../Dashboard/DashboardHome';
   import DashboardGammaR3 from '../Dashboard/Round3/DashboardGammaR3';
   import DonationGammaR3 from '../Donation/Round3/DonationGammaR3';
 
-//test
-import testSite from '../DataPipeline/testSite';
-
 import './App.css';
 
 const theme = createMuiTheme({
@@ -127,8 +124,6 @@ class App extends Component {
 
               <Route path="/dashboardC3" component={ DashboardGammaR3 } />   {/* Dashboard Gamma, Round 3 */}
               <Route path="/donationC3" component={ DonationGammaR3 } />     {/* Donation Gamma, Round 3 */}
-
-              <Route path="/testing" component={ testSite } />
 
               <Route path='/' >
                 <Redirect to="/home" /> 
