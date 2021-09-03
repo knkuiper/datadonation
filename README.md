@@ -1,7 +1,11 @@
 
+# Data donation web app for HCI masters thesis
+
 Web app for research study on data donation for Msc Thesis Human-Computer Interaction at Utrecht University.
 
 Link to github pages for the data donation interface https://knkuiper.github.io/Data-donation-web-app/
+
+![](Data_donation_screenshot.png)
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
