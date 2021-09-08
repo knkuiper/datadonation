@@ -64,7 +64,8 @@ const theme = createMuiTheme({
         },
         paper: {
           light: '#e3f2fd',
-          dark: '#37474f',  // #002597
+          dark: '#37474f', // #455a64
+          // #002597
           // main: '#2196f3'
           // #2196f3 (lighten: 90%)
         },
