@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardHeader, CardContent, CardActions, Typography, CardMedia } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardActions, Typography, CardMedia } from '@material-ui/core';
+// unused import CardContent
 import clsx from 'clsx';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
