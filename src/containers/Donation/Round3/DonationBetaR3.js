@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Stepper, Step, StepButton, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
+import { Grid, Stepper, Step, StepLabel, StepContent, Button, Paper, Typography, Avatar } from '@material-ui/core';
 import ScriptBeta from '../../Script/ScriptBeta';
 import DataFeedbackBeta from '../../Feedback/DataFeedbackBeta';
 import UUlogo from '../../../assets/img/UU_logo.png';
@@ -52,8 +52,9 @@ function getStepContent(step) {
             return `If you have not already requested your data from Google, go to Google Takeout and follow the instructions 
             to request your location data.`;
         case 1:
-            return `Once you have saved your data package from Google to your device, select the data file (in ZIP format) 
-            to upload. Note: Your data package stays locally on your device and will not be uploaded to a server.`;
+            return `Once you have saved your data package from Google to your device, select the data file to upload (the file 
+            needs to be in ZIP format. On a Mac the file is automatically unzipped and you will need to zip it by clicking 
+            compress file). Note: Your data package stays locally on your device and will not be uploaded to a server.`;
         case 2:
             return `By processing the data, the relevant data for this research will be extracted from your data package. 
             The data will not leave your device and no data is stored on a server. The extracted data will be shown at 
@@ -129,9 +130,7 @@ export default function DonationBetaR3() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const handleStep = (step) => () => {
-        setActiveStep(step);
-    }
+    
 
     const handleComplete = () => {
         const newCompleted = new Set(completed);
@@ -146,10 +145,6 @@ export default function DonationBetaR3() {
         return skipped.has(step);
     }
 
-    function isStepComplete(step) {
-        return completed.has(step);
-    }
-
     return (
         <>
         <Grid container className={classes.root}
@@ -162,29 +157,24 @@ export default function DonationBetaR3() {
                 <Stepper 
                 activeStep={activeStep} 
                 orientation="vertical" 
-                nonLinear
                 className={classes.progressContainer}
                 >
                 {steps.map((label, index) => {
                     const stepProps = {};
-                    const buttonProps = {};
+                    const labelProps = {};
                     if (isStepOptional(index)) {
-                       // buttonProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
+                       // labelProps.optional = <Typography variant="caption">Consent to data donation</Typography>;
                     }
                     if (isStepSkipped(index)) {
                         stepProps.completed = false;
                     }
                     return (
                     <Step key={label} {...stepProps}>
-                            <StepButton
-                                onClick={handleStep(index)}
-                                completed={isStepComplete(index)}
-                                {...buttonProps}
-                            >
-                                <Typography variant="h6">
-                                    {label}
-                                </Typography>
-                            </StepButton>
+                            <StepLabel {...labelProps}>
+                            <Typography variant="h6">
+                                {label}
+                            </Typography>
+                        </StepLabel>
                     <StepContent>
                         <Typography gutterBottom variant="body1" color="inherit">{getStepContent(index)}</Typography>
                                 <div className={classes.actionsContainer}>
