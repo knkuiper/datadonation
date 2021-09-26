@@ -6,14 +6,14 @@ import Header from '../../components/Header/Header';
 import DashboardHome from '../Dashboard/DashboardHome';
 // Round 1 
   // Alpha versions
-  //import DashboardAlphaR1 from '../Dashboard/Round1/DashboardAlphaR1';
-  //import DonationAlphaR1 from '../Donation/Round1/DonationAlphaR1';
+  import DashboardAlphaR1 from '../Dashboard/Round1/DashboardAlphaR1';
+  import DonationAlphaR1 from '../Donation/Round1/DonationAlphaR1';
   // Beta versions
-  //import DashboardBetaR1 from '../Dashboard/Round1/DashboardBetaR1';
-  //import DonationBetaR1 from '../Donation/Round1/DonationBetaR1';
+  import DashboardBetaR1 from '../Dashboard/Round1/DashboardBetaR1';
+  import DonationBetaR1 from '../Donation/Round1/DonationBetaR1';
   // Gamma versions
-  //import DashboardGammaR1 from '../Dashboard/Round1/DashboardGammaR1';
-  //import DonationGammaR1 from '../Donation/Round1/DonationGammaR1';
+  import DashboardGammaR1 from '../Dashboard/Round1/DashboardGammaR1';
+  import DonationGammaR1 from '../Donation/Round1/DonationGammaR1';
 
 // Round 2 
   // Alpha versions
@@ -99,14 +99,14 @@ class App extends Component {
 
               <Route path="/home" component={ DashboardHome } />   {/* Dashboard home page */}
               
-              {/*<Route path="/dashboardA1" component={ DashboardAlphaR1 } />  {/* Dashboard Alpha, Round 1 */}
-              {/*<Route path="/donationA1" component={ DonationAlphaR1 } />    {/* Donation Alpha, Round 1 */}
+              <Route path="/dashboardA1" component={ DashboardAlphaR1 } />  {/* Dashboard Alpha, Round 1 */}
+              <Route path="/donationA1" component={ DonationAlphaR1 } />    {/* Donation Alpha, Round 1 */}
 
-              {/*<Route path="/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
-              {/*<Route path="/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
+              <Route path="/dashboardB1" component={ DashboardBetaR1 } />   {/* Dashboard Beta, Round 1 */}
+              <Route path="/donationB1" component={ DonationBetaR1 } />     {/* Donation Beta, Round 1 */}
 
-              {/*<Route path="/dashboardC1" component={ DashboardGammaR1 } />  {/* Dashboard Gamma, Round 1 */}
-              {/*<Route path="/donationC1" component={ DonationGammaR1 } />    {/* Donation Gamma, Round 1 */}
+              <Route path="/dashboardC1" component={ DashboardGammaR1 } />  {/* Dashboard Gamma, Round 1 */}
+              <Route path="/donationC1" component={ DonationGammaR1 } />    {/* Donation Gamma, Round 1 */}
 
               <Route path="/dashboardA2" component={ DashboardAlphaR2 }/>    {/* Dashboard Alpha, Round 2 */}
               <Route path="/donationA2" component={ DonationAlphaR2 } />     {/* Donation Alpha, Round 2 */}
