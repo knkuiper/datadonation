@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 // BrowserRouter HashRouter
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import Header from '../../components/Header/Header';
@@ -92,7 +92,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <HashRouter> {/* for BrowserRouter basename="/Data-donation-web-app"*/}
+        <BrowserRouter basename="/donationapp"> {/* for BrowserRouter basename="/Data-donation-web-app"*/}
           <div>
             <Header />
             <Switch>
@@ -132,7 +132,7 @@ class App extends Component {
             
             </Switch> 
           </div>
-        </HashRouter>
+        </BrowserRouter>
       </MuiThemeProvider>
     );
   }

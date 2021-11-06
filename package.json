@@ -1,6 +1,6 @@
 {
-  "name": "Data-donation-web-app",
-  "homepage": "https://katrinekuiper.com/donationapp",
+  "name": "datadonationsite",
+  "homepage": "https://katrinekuiper.com/datadonationsite",
   "version": "0.1.0",
   "private": true,
   "dependencies": { 
