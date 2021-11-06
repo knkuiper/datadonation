@@ -1,4 +1,4 @@
-/// Dashboard page for version Gamma - high construal version with high level explanation + the script
+/// Dashboard page for version Gamma - low construal version with low level explanation + the script
 /// For round 2 of experiment, links to donation page Gamma round 2
 
 import React from 'react';

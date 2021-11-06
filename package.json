@@ -1,9 +1,9 @@
 {
   "name": "Data-donation-web-app",
-  "homepage": "https://katrinekuiper.com",
+  "homepage": "https://katrinekuiper.com/donationapp",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "dependencies": { 
     "@fontsource/roboto": "^4.5.0",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
