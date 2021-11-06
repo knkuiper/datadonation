@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.62a8bc85.chunk.css",
-    "main.js": "/static/js/main.52cf6b3b.chunk.js",
-    "main.js.map": "/static/js/main.52cf6b3b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e118edb3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e118edb3.js.map",
-    "static/js/2.5f09495a.chunk.js": "/static/js/2.5f09495a.chunk.js",
-    "static/js/2.5f09495a.chunk.js.map": "/static/js/2.5f09495a.chunk.js.map",
-    "static/js/3.2a9db289.chunk.js": "/static/js/3.2a9db289.chunk.js",
-    "static/js/3.2a9db289.chunk.js.map": "/static/js/3.2a9db289.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.62a8bc85.chunk.css.map": "/static/css/main.62a8bc85.chunk.css.map",
-    "static/js/2.5f09495a.chunk.js.LICENSE.txt": "/static/js/2.5f09495a.chunk.js.LICENSE.txt",
-    "static/media/InfographicAlpha.55f6da3a.mp4": "/static/media/InfographicAlpha.55f6da3a.mp4",
-    "static/media/InfographicBeta.4507f95a.mp4": "/static/media/InfographicBeta.4507f95a.mp4",
-    "static/media/InfographicGamma.391b5db0.mp4": "/static/media/InfographicGamma.391b5db0.mp4",
-    "static/media/UU_logo.0d85e760.png": "/static/media/UU_logo.0d85e760.png"
+    "main.css": "/donationapp/static/css/main.62a8bc85.chunk.css",
+    "main.js": "/donationapp/static/js/main.1057adfb.chunk.js",
+    "main.js.map": "/donationapp/static/js/main.1057adfb.chunk.js.map",
+    "runtime-main.js": "/donationapp/static/js/runtime-main.e935a85a.js",
+    "runtime-main.js.map": "/donationapp/static/js/runtime-main.e935a85a.js.map",
+    "static/js/2.5f09495a.chunk.js": "/donationapp/static/js/2.5f09495a.chunk.js",
+    "static/js/2.5f09495a.chunk.js.map": "/donationapp/static/js/2.5f09495a.chunk.js.map",
+    "static/js/3.2a9db289.chunk.js": "/donationapp/static/js/3.2a9db289.chunk.js",
+    "static/js/3.2a9db289.chunk.js.map": "/donationapp/static/js/3.2a9db289.chunk.js.map",
+    "index.html": "/donationapp/index.html",
+    "static/css/main.62a8bc85.chunk.css.map": "/donationapp/static/css/main.62a8bc85.chunk.css.map",
+    "static/js/2.5f09495a.chunk.js.LICENSE.txt": "/donationapp/static/js/2.5f09495a.chunk.js.LICENSE.txt",
+    "static/media/InfographicAlpha.55f6da3a.mp4": "/donationapp/static/media/InfographicAlpha.55f6da3a.mp4",
+    "static/media/InfographicBeta.4507f95a.mp4": "/donationapp/static/media/InfographicBeta.4507f95a.mp4",
+    "static/media/InfographicGamma.391b5db0.mp4": "/donationapp/static/media/InfographicGamma.391b5db0.mp4",
+    "static/media/UU_logo.0d85e760.png": "/donationapp/static/media/UU_logo.0d85e760.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e118edb3.js",
+    "static/js/runtime-main.e935a85a.js",
     "static/js/2.5f09495a.chunk.js",
     "static/css/main.62a8bc85.chunk.css",
-    "static/js/main.52cf6b3b.chunk.js"
+    "static/js/main.1057adfb.chunk.js"
   ]
 }
