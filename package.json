@@ -1,6 +1,6 @@
 {
-  "name": "datadonationsite",
-  "homepage": "https://katrinekuiper.com/datadonationsite",
+  "name": "datadonation",
+  "homepage": "https://knkuiper.github.io/datadonation/",
   "version": "0.1.0",
   "private": true,
   "dependencies": { 
