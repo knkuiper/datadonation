@@ -2,6 +2,7 @@ import json
 import itertools
 import re
 import zipfile
+
 import pandas as pd
 
 # years and months to extract data for
@@ -59,7 +60,6 @@ def __activity_duration(data):
             start_time = data_unit["activitySegment"]["duration"]["startTimestampMs"]
             end_time = data_unit["activitySegment"]["duration"]["endTimestampMs"]
             activity_duration += (int(end_time) - int(start_time))/(1e3*24*60*60)
-    
     return activity_duration
 
 
