@@ -1,9 +1,9 @@
 
 # Data donation web app for HCI masters thesis
 
-Web app for research study on data donation for Msc Thesis Human-Computer Interaction at Utrecht University. Created using React.js and Material UI.
+Web application for research study on data donation for Msc Thesis Human-Computer Interaction at Utrecht University. App created using React and Material UI.
 
-Link to github pages for the data donation interface https://katrinekuiper.com
+Link to github pages for the data donation interface https://knkuiper.github.io/datadonation
 
 ![](Data_donation_screenshot.png)
 
